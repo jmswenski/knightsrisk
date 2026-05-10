@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organization Settings | Castlewatch Knowledge Base</title>
+  <meta name="description" content="How Castlewatch organization administrators manage members, roles, mapped sites, notification defaults, policy thresholds, sharing defaults, and profile details.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon-180.png">
+  <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="nav-brand" href="../../">Knightsbridge Risk</a>
+      <div class="nav-links">
+        <a href="../">Knowledge Base</a>
+        <a href="../../user-guide/">User Guide</a>
+        <a href="https://castlewatch.onrender.com/login">Log in</a>
+        <a class="primary" href="https://castlewatch.onrender.com/signup">Sign up</a>
+      </div>
+    </nav>
+    <section class="hero">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../">Knowledge Base</a>
+        <span class="sep">/</span>
+        <a href="../#administrators">For Administrators</a>
+        <span class="sep">/</span>
+        <span class="current">Organization settings</span>
+      </nav>
+      <span class="role-tag admin">For Administrators</span>
+      <h1 style="margin-top:14px">Organization settings</h1>
+      <p class="lead">Organization settings define the workspace operating model: who can do what, where incidents happen, who gets notified, and how reports are shared by default. Get these right before broad rollout.</p>
+    </section>
+  </header>
+
+  <main class="article-layout">
+    <aside class="toc">
+      <h2>On this page</h2>
+      <ol>
+        <li><a href="#purpose">Purpose</a></li>
+        <li><a href="#members">Members &amp; roles</a></li>
+        <li><a href="#sites">Mapped sites</a></li>
+        <li><a href="#notifications">Notification defaults</a></li>
+        <li><a href="#policies">Policy thresholds</a></li>
+        <li><a href="#sharing">Sharing defaults</a></li>
+        <li><a href="#profile">Organization profile</a></li>
+        <li><a href="#scenarios">Scenarios</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#related">Related articles</a></li>
+      </ol>
+    </aside>
+
+    <article class="article-body">
+      <dl class="summary-box">
+        <div><dt>Audience</dt><dd>Organization administrators preparing the workspace for live operations.</dd></div>
+        <div><dt>Read first</dt><dd><a href="../onboarding/" style="color:var(--accent)">Onboarding</a> to complete the organization profile.</dd></div>
+        <div><dt>Read next</dt><dd><a href="../trusted-partners/" style="color:var(--accent)">Trusted partners</a> once thresholds and sharing defaults are set.</dd></div>
+        <div><dt>Outcome</dt><dd>Roles, sites, alerts, and policy thresholds aligned to operating reality.</dd></div>
+      </dl>
+
+      <section id="purpose" class="panel">
+        <h2>Purpose</h2>
+        <p>Organization settings are where the workspace stops being a generic Castlewatch tenant and starts behaving like <em>your</em> security operation. The settings page exposes six related groups of controls: members, mapped sites, notification defaults, policy thresholds, sharing defaults, and the organization profile. Each affects what other roles see and what they can do.</p>
+        <p>Treat the page as a configuration surface, not a dashboard. Changes here ripple into reports, review decisions, partner workflows, and notifications. Make changes deliberately and document them in the team's operating notes.</p>
+      </section>
+
+      <section id="members" class="panel">
+        <h2>Members &amp; roles</h2>
+        <p>Members belong to an organization and receive exactly one role. Keep roles aligned with <strong>actual duties</strong>, not seniority alone. A small team may start with one administrator, one or two reviewers, and reporters who can submit incidents.</p>
+        <h3>Role reference</h3>
+        <table class="field-table">
+          <thead><tr><th>Role</th><th>Can do</th><th>Cannot do</th></tr></thead>
+          <tbody>
+            <tr><td>Org admin</td><td>All organization configuration: members, sites, notifications, policies, sharing, profile, partners (subject to policy thresholds).</td><td>Nothing within the workspace; external billing-portal actions still depend on the billing account.</td></tr>
+            <tr><td>Reviewer</td><td>Claim, verify, request changes, reject, and return reports; comment on incidents; log sightings.</td><td>Manage members, change organization settings, or initiate partner requests unless thresholds allow it.</td></tr>
+            <tr><td>Reporter</td><td>Submit incidents, comment on their own reports, log sightings.</td><td>Approve or moderate reports; access reports outside their visibility scope.</td></tr>
+            <tr><td>Viewer</td><td>Read incident records inside their visibility scope.</td><td>Submit, moderate, comment, or change settings.</td></tr>
+          </tbody>
+        </table>
+        <h3>Maintenance</h3>
+        <ul>
+          <li>Review the member list quarterly and after staffing changes.</li>
+          <li>Disable accounts immediately when someone leaves the security team.</li>
+          <li>Avoid one-person dependencies &mdash; always have a second org admin.</li>
+          <li>Promote a member's role only after confirming they have read the relevant article in this knowledge base.</li>
+        </ul>
+      </section>
+
+      <section id="sites" class="panel">
+        <h2>Mapped sites</h2>
+        <p>Mapped sites provide known coordinates for reporting and dashboard map placement. Add campuses, common event locations, or other operationally relevant places. Use labels that reporters will recognize quickly during an incident.</p>
+        <h3>Site reference</h3>
+        <table class="field-table">
+          <thead><tr><th>Field</th><th>Purpose</th><th>Tips</th></tr></thead>
+          <tbody>
+            <tr><td>Label</td><td>Selectable name shown in the reporting form and on the map.</td><td>Use names staff already say aloud: "Main Campus", "North Lot", "Family Center".</td></tr>
+            <tr><td>Address</td><td>Human-readable location reference.</td><td>Use the street address even if coordinates are entered directly.</td></tr>
+            <tr><td>Coordinates</td><td>Latitude/longitude for map placement.</td><td>Verify with a map preview after saving &mdash; incorrect coordinates cause the most map-placement complaints.</td></tr>
+            <tr><td>Notes</td><td>Internal context for reviewers.</td><td>Note access points, blind spots, or operating hours if relevant.</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Accurate mapped sites improve the incident map. They also reduce location ambiguity in reports and review decisions. If incidents are not appearing on the map, see <a href="../troubleshooting/#map">Troubleshooting &rarr; Map placement</a>.</p>
+      </section>
+
+      <section id="notifications" class="panel">
+        <h2>Notification defaults</h2>
+        <p>Organization notification defaults define the <strong>baseline alert policy</strong> for incident events. They should be reviewed before inviting a large reporting group. Personal account preferences can layer on top of organization defaults, but organization defaults should reflect the leadership team's operating posture.</p>
+        <h3>What organization defaults control</h3>
+        <ul>
+          <li>Which events trigger alerts at the organization level (new submission, verified, changes requested, rejected, sighting, partner action).</li>
+          <li>The minimum severity an event must reach before generating an alert.</li>
+          <li>Whether new members start with notifications opted-in or opted-out.</li>
+          <li>Quiet-hours guidance applied as a default (each user can adjust their own).</li>
+        </ul>
+        <p>See <a href="../notifications-access/#notifications">Notifications &amp; access</a> for the personal-preferences layer and channel detail.</p>
+      </section>
+
+      <section id="policies" class="panel">
+        <h2>Policy thresholds</h2>
+        <p>Policy thresholds decide which role is required to manage members, request partners, change organization settings, and update notification defaults. These thresholds are important because they turn trust into <strong>explicit permission</strong> rather than assumptions.</p>
+        <h3>Threshold reference</h3>
+        <table class="field-table">
+          <thead><tr><th>Action</th><th>Typical minimum</th><th>Reason</th></tr></thead>
+          <tbody>
+            <tr><td>Invite members</td><td>Org admin</td><td>Affects who can act on behalf of the organization.</td></tr>
+            <tr><td>Change roles</td><td>Org admin</td><td>Direct security implication; should not be delegated casually.</td></tr>
+            <tr><td>Request partner connections</td><td>Org admin or trusted reviewer</td><td>External trust decision; harder to undo than internal settings.</td></tr>
+            <tr><td>Change notification defaults</td><td>Org admin</td><td>Affects how the whole team is alerted.</td></tr>
+            <tr><td>Edit mapped sites</td><td>Org admin or reviewer</td><td>Affects map accuracy across all incidents.</td></tr>
+            <tr><td>Change sharing defaults</td><td>Org admin</td><td>Implicates trust posture with partners.</td></tr>
+          </tbody>
+        </table>
+        <ul class="checklist">
+          <li>Use the lowest role only when the task truly needs broad delegation.</li>
+          <li>Keep partner requests restricted to people who understand the organization's trust posture.</li>
+          <li>Review policy thresholds after leadership or security team changes.</li>
+          <li>Document the chosen thresholds where the team can find them.</li>
+        </ul>
+      </section>
+
+      <section id="sharing" class="panel">
+        <h2>Sharing defaults</h2>
+        <p>Sharing defaults influence the <strong>initial visibility setting</strong> on new reports. They do not replace reviewer judgment. Defaults should reflect the common case for the organization, while reporters and reviewers should still narrow or broaden visibility intentionally for each incident.</p>
+        <table class="field-table">
+          <thead><tr><th>Default</th><th>Use when</th></tr></thead>
+          <tbody>
+            <tr><td>Origin only</td><td>Most reports concern internal operations and should not be shared until a reviewer makes a deliberate decision.</td></tr>
+            <tr><td>Selected partners</td><td>The team routinely shares with a small set of partners and prefers the form to start there.</td></tr>
+            <tr><td>Trust group</td><td>A regional coalition exists and most reports apply to it.</td></tr>
+            <tr><td>Region</td><td>Rare; only when the workspace is part of a region-wide awareness program.</td></tr>
+          </tbody>
+        </table>
+        <p class="note">The safest default is <strong>origin only</strong>. Broadening visibility should be an active reviewer decision, not a side-effect of a wide default.</p>
+      </section>
+
+      <section id="profile" class="panel">
+        <h2>Organization profile</h2>
+        <p>The organization profile contains the public-facing name, region, status, billing state, and plan context shown inside the workspace. Keep the profile current so trusted partners and team members can identify the organization accurately.</p>
+        <ul>
+          <li>Update the name promptly after a rebrand or merger.</li>
+          <li>Update the region if the organization relocates or joins a different regional network.</li>
+          <li>Use the billing portal link for plan changes and invoice access.</li>
+          <li>Confirm the profile is up to date before requesting new trusted partners.</li>
+        </ul>
+      </section>
+
+      <section id="scenarios" class="panel">
+        <h2>Common scenarios</h2>
+        <div class="scenarios">
+          <div class="scenario">
+            <h4>Onboarding a new reviewer</h4>
+            <p>Invite the member, assign the reviewer role, point them at the <a href="../review-workflow/">review workflow article</a>, and confirm their personal notification preferences are set before they claim a report. Add them to any internal coordination channels you use.</p>
+          </div>
+          <div class="scenario">
+            <h4>A reporter cannot select a mapped site</h4>
+            <p>Confirm the site exists, the coordinates are saved, and the reporter has refreshed the page. If the site is brand-new, the reporting form may still be cached &mdash; reload the workspace.</p>
+          </div>
+          <div class="scenario">
+            <h4>Partners are sending requests you do not recognize</h4>
+            <p>Tighten the partner-request policy threshold so only org admins can <em>accept</em> incoming partner requests. Cross-check the requesting organization name and region against your trust list before accepting.</p>
+          </div>
+          <div class="scenario">
+            <h4>Notification volume is too high</h4>
+            <p>Raise the organization minimum-severity threshold for non-critical events. Then ask the team to review personal alert preferences and quiet hours. See <a href="../notifications-access/#notifications">Notifications</a>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="panel">
+        <h2>Frequently asked questions</h2>
+        <div class="faq">
+          <details>
+            <summary>Can two people share an org admin role?</summary>
+            <p>Yes &mdash; and you should. Always maintain at least two org admins so a single departure does not lock the workspace.</p>
+          </details>
+          <details>
+            <summary>What happens when a member's role is downgraded?</summary>
+            <p>Their access changes immediately. Prior incidents they submitted remain under their authorship. Past comments are not retroactively removed.</p>
+          </details>
+          <details>
+            <summary>Can a mapped site be deleted?</summary>
+            <p>Sites can be archived or replaced. Existing incidents that referenced the site keep their location data. Avoid renaming sites mid-incident-investigation.</p>
+          </details>
+          <details>
+            <summary>Do policy thresholds apply retroactively?</summary>
+            <p>No. They apply to new actions from the moment they are saved. Existing partner connections and member assignments are not undone by tightening a threshold.</p>
+          </details>
+          <details>
+            <summary>How often should settings be reviewed?</summary>
+            <p>Quarterly, plus after any leadership change, regional realignment, or significant incident pattern.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="related" class="panel">
+        <h2>Related articles</h2>
+        <div class="related-articles">
+          <a href="../onboarding/"><span class="meta">Workspace setup</span><strong>Onboarding</strong>Create the workspace and complete the organization profile.</a>
+          <a href="../trusted-partners/"><span class="meta">Trust network</span><strong>Trusted partners</strong>Partner workflows controlled by your policy thresholds.</a>
+          <a href="../notifications-access/"><span class="meta">Access</span><strong>Notifications &amp; access</strong>Personal preferences that layer on top of organization defaults.</a>
+          <a href="../glossary/"><span class="meta">Reference</span><strong>Glossary</strong>Role, policy threshold, sharing defaults, mapped site.</a>
+        </div>
+      </section>
+
+      <nav class="prev-next" aria-label="Article navigation">
+        <a class="prev" href="../onboarding/">
+          <span class="label">Previous</span>
+          <span class="title">Onboarding</span>
+        </a>
+        <a class="next" href="../trusted-partners/">
+          <span class="label">Next</span>
+          <span class="title">Trusted partners</span>
+        </a>
+      </nav>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <span class="footer-brand-mark" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          </span>
+          <span>Knightsbridge Risk</span>
+        </div>
+        <p>Protective security, tactical risk solutions, and the Castlewatch incident-coordination platform &mdash; engineered for trust-based teams.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../../#capabilities">Executive Protection</a></li>
+          <li><a href="../../#capabilities">Training Evaluation</a></li>
+          <li><a href="../../#capabilities">Red Team Testing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Castlewatch</h4>
+        <ul>
+          <li><a href="https://castlewatch.onrender.com/signup">Create workspace</a></li>
+          <li><a href="https://castlewatch.onrender.com/login">Log in</a></li>
+          <li><a href="../">Knowledge base</a></li>
+          <li><a href="../../user-guide/">User guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@knightsrisk.com">contact@knightsrisk.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Knightsbridge Risk Management. All rights reserved.</span>
+      <span>Discretion &middot; Pedigree &middot; Clarity</span>
+    </div>
+  </footer>
+</body>
+</html>

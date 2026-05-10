@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glossary | Castlewatch Knowledge Base</title>
+  <meta name="description" content="Shared operational vocabulary for Castlewatch: severity, visibility, moderation states, connection states, trust groups, policy thresholds, and other terms used across the platform.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon-180.png">
+  <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="nav-brand" href="../../">Knightsbridge Risk</a>
+      <div class="nav-links">
+        <a href="../">Knowledge Base</a>
+        <a href="../../user-guide/">User Guide</a>
+        <a href="https://castlewatch.onrender.com/login">Log in</a>
+        <a class="primary" href="https://castlewatch.onrender.com/signup">Sign up</a>
+      </div>
+    </nav>
+    <section class="hero">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../">Knowledge Base</a>
+        <span class="sep">/</span>
+        <span class="current">Glossary</span>
+      </nav>
+      <span class="role-tag reference">Reference &middot; All roles</span>
+      <h1 style="margin-top:14px">Glossary of Castlewatch terms</h1>
+      <p class="lead">Shared definitions for the vocabulary used across the platform. When an article references a term defined here, it carries the same meaning everywhere.</p>
+    </section>
+  </header>
+
+  <main class="article-layout">
+    <aside class="toc">
+      <h2>On this page</h2>
+      <ol>
+        <li><a href="#workspace">Workspace &amp; identity</a></li>
+        <li><a href="#reporting">Reporting</a></li>
+        <li><a href="#moderation">Moderation</a></li>
+        <li><a href="#visibility">Visibility &amp; trust</a></li>
+        <li><a href="#access">Access &amp; alerts</a></li>
+      </ol>
+    </aside>
+
+    <article class="article-body">
+      <dl class="summary-box">
+        <div><dt>Purpose</dt><dd>One shared definition for every term referenced across the knowledge base.</dd></div>
+        <div><dt>Used by</dt><dd>Administrators, reviewers, reporters, partners.</dd></div>
+        <div><dt>Companion</dt><dd><a href="../troubleshooting/" style="color:var(--accent)">Troubleshooting</a> when a workflow behaves unexpectedly.</dd></div>
+      </dl>
+
+      <section id="workspace" class="panel">
+        <h2>Workspace &amp; identity</h2>
+        <table class="field-table">
+          <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+          <tbody>
+            <tr><td>Workspace</td><td>The organization-scoped boundary for members, roles, incidents, partners, sites, and settings. Every Castlewatch user operates inside exactly one workspace at a time.</td></tr>
+            <tr><td>Organization profile</td><td>The public-facing name, region, billing state, and plan context that partners and team members see.</td></tr>
+            <tr><td>Region</td><td>A label like a metro area, county, or regional network used to make the workspace recognizable to partners.</td></tr>
+            <tr><td>Mapped site</td><td>A saved location with coordinates (campus, event site, building) that reports and the dashboard map reference.</td></tr>
+            <tr><td>Member</td><td>A user account associated with the workspace and assigned exactly one role.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="reporting" class="panel">
+        <h2>Reporting</h2>
+        <table class="field-table">
+          <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+          <tbody>
+            <tr><td>Incident</td><td>A durable record of one operationally meaningful event, with structured metadata, narrative, comments, sightings, and attachments.</td></tr>
+            <tr><td>Severity</td><td>The reporter or reviewer's assessment of potential impact: <strong>low</strong>, <strong>medium</strong>, <strong>high</strong>, or <strong>critical</strong>.</td></tr>
+            <tr><td>Operational status</td><td>What is still happening or needed: open, monitoring, resolved. Independent of severity.</td></tr>
+            <tr><td>Tags</td><td>Searchable labels reporters and reviewers apply to surface patterns (e.g., <em>vehicle</em>, <em>repeat-pattern</em>, <em>threat-statement</em>).</td></tr>
+            <tr><td>Sighting</td><td>A follow-up observation logged on the incident timeline after the original report (patrol confirmation, witness update, recurrence).</td></tr>
+            <tr><td>Attachment</td><td>A supporting file (photo, document, exported evidence) tied to an incident record.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="moderation" class="panel">
+        <h2>Moderation</h2>
+        <table class="field-table">
+          <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+          <tbody>
+            <tr><td>Submitted</td><td>The report entered the workflow but no reviewer has claimed it.</td></tr>
+            <tr><td>Under review</td><td>A reviewer has claimed the report and is evaluating it.</td></tr>
+            <tr><td>Changes requested</td><td>The report needs clarification or correction before it can be verified.</td></tr>
+            <tr><td>Verified</td><td>The report is accepted for its selected visibility scope and becomes part of the durable record.</td></tr>
+            <tr><td>Rejected</td><td>The report will not proceed as an operational incident record (duplicate, out of scope, unsupported).</td></tr>
+            <tr><td>Return to review</td><td>Action that moves a previously closed report back into the review queue for additional redaction or clarification.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="visibility" class="panel">
+        <h2>Visibility &amp; trust</h2>
+        <table class="field-table">
+          <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+          <tbody>
+            <tr><td>Visibility</td><td>The audience scope for a verified incident: origin only, selected partners, trust group, or region.</td></tr>
+            <tr><td>Trusted partner</td><td>An organization with an explicit, stateful relationship to your workspace.</td></tr>
+            <tr><td>Connection state</td><td>Requested, connected, declined, or revoked &mdash; the lifecycle stage of a partner relationship.</td></tr>
+            <tr><td>Trust group</td><td>A named coalition of connected partners used as a shorthand for repeated visibility decisions.</td></tr>
+            <tr><td>Template MOU / NDA</td><td>Standard documents with tracked signature status and signer metadata, acknowledging the relationship.</td></tr>
+            <tr><td>Sharing defaults</td><td>Organization-level setting that influences the initial visibility choice on new reports.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="access" class="panel">
+        <h2>Access &amp; alerts</h2>
+        <table class="field-table">
+          <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+          <tbody>
+            <tr><td>Role</td><td>Org admin, reviewer, reporter, or viewer &mdash; determines which actions appear and which workflows are available.</td></tr>
+            <tr><td>Policy threshold</td><td>Minimum role required for sensitive actions like managing members, partner requests, or notification defaults.</td></tr>
+            <tr><td>Billing gate</td><td>A workflow that requires an active subscription before live use.</td></tr>
+            <tr><td>Organization notification defaults</td><td>Baseline alert routing for the organization, layered under each user's personal preferences.</td></tr>
+            <tr><td>Personal alert preferences</td><td>Per-user controls for event type, channel, severity threshold, quiet hours, and SMS destination.</td></tr>
+            <tr><td>MFA</td><td>Multi-factor authentication using an authenticator app; recommended for administrators and reviewers.</td></tr>
+            <tr><td>Quiet hours</td><td>A time window during which non-urgent notifications are suppressed for a user.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="panel">
+        <h2>Related references</h2>
+        <div class="related-articles">
+          <a href="../onboarding/"><span class="meta">Workspace setup</span><strong>Onboarding</strong>Workspace, organization profile, region.</a>
+          <a href="../incident-reporting/"><span class="meta">Reporter</span><strong>Incident reporting</strong>Severity, tags, operational status, visibility.</a>
+          <a href="../review-workflow/"><span class="meta">Reviewer</span><strong>Review workflow</strong>Moderation states and actions.</a>
+          <a href="../trusted-partners/"><span class="meta">Trust</span><strong>Trusted partners</strong>Connection states, trust groups, MOU/NDA.</a>
+          <a href="../notifications-access/"><span class="meta">Access</span><strong>Notifications &amp; access</strong>Roles, policy thresholds, billing gates.</a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <span class="footer-brand-mark" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          </span>
+          <span>Knightsbridge Risk</span>
+        </div>
+        <p>Protective security, tactical risk solutions, and the Castlewatch incident-coordination platform &mdash; engineered for trust-based teams.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../../#capabilities">Executive Protection</a></li>
+          <li><a href="../../#capabilities">Training Evaluation</a></li>
+          <li><a href="../../#capabilities">Red Team Testing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Castlewatch</h4>
+        <ul>
+          <li><a href="https://castlewatch.onrender.com/signup">Create workspace</a></li>
+          <li><a href="https://castlewatch.onrender.com/login">Log in</a></li>
+          <li><a href="../">Knowledge base</a></li>
+          <li><a href="../../user-guide/">User guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@knightsrisk.com">contact@knightsrisk.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Knightsbridge Risk Management. All rights reserved.</span>
+      <span>Discretion &middot; Pedigree &middot; Clarity</span>
+    </div>
+  </footer>
+</body>
+</html>

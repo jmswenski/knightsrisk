@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trusted Partners &amp; Trust Groups | Castlewatch Knowledge Base</title>
+  <meta name="description" content="How Castlewatch manages trusted partner requests, connection states, MOU and NDA tracking, partner messages, and trust groups for incident visibility decisions.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon-180.png">
+  <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="nav-brand" href="../../">Knightsbridge Risk</a>
+      <div class="nav-links">
+        <a href="../">Knowledge Base</a>
+        <a href="../../user-guide/">User Guide</a>
+        <a href="https://castlewatch.onrender.com/login">Log in</a>
+        <a class="primary" href="https://castlewatch.onrender.com/signup">Sign up</a>
+      </div>
+    </nav>
+    <section class="hero">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../">Knowledge Base</a>
+        <span class="sep">/</span>
+        <a href="../#administrators">For Administrators</a>
+        <span class="sep">/</span>
+        <span class="current">Trusted partners</span>
+      </nav>
+      <span class="role-tag admin">For Administrators</span>
+      <h1 style="margin-top:14px">Trusted partners &amp; trust groups</h1>
+      <p class="lead">Trusted partner workflows help organizations coordinate without turning every incident into a public broadcast. Relationships are explicit, stateful, and tied to document tracking &mdash; not informal contact lists.</p>
+    </section>
+  </header>
+
+  <main class="article-layout">
+    <aside class="toc">
+      <h2>On this page</h2>
+      <ol>
+        <li><a href="#purpose">Purpose</a></li>
+        <li><a href="#states">Connection states</a></li>
+        <li><a href="#lifecycle">Relationship lifecycle</a></li>
+        <li><a href="#documents">MOU &amp; NDA tracking</a></li>
+        <li><a href="#messages">Partner messages</a></li>
+        <li><a href="#groups">Trust groups</a></li>
+        <li><a href="#scenarios">Scenarios</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#related">Related articles</a></li>
+      </ol>
+    </aside>
+
+    <article class="article-body">
+      <dl class="summary-box">
+        <div><dt>Audience</dt><dd>Administrators and senior reviewers managing inter-organization trust.</dd></div>
+        <div><dt>Read first</dt><dd><a href="../organization-settings/#policies" style="color:var(--accent)">Policy thresholds</a> &mdash; they control who can act here.</dd></div>
+        <div><dt>Companion</dt><dd><a href="../incident-reporting/#visibility" style="color:var(--accent)">Visibility choices</a> for how trust shows up in reports.</dd></div>
+        <div><dt>Outcome</dt><dd>Stable partner connections, tracked documents, and useful trust groups.</dd></div>
+      </dl>
+
+      <section id="purpose" class="panel">
+        <h2>Purpose</h2>
+        <p>Trusted partners are organizations your team intends to coordinate with. Castlewatch treats the relationship as a <strong>workflow</strong>: one side requests, the receiving side reviews, document status is tracked, and the relationship is accepted, declined, connected, or revoked. This keeps incident visibility tied to real operational trust instead of informal contact lists.</p>
+        <p>Use trusted partners for organizations that will receive partner-scoped reports, contribute sightings, or operate inside a shared trust group. Treat the addition of a partner with the same care as adding a member &mdash; you are extending real operational visibility.</p>
+      </section>
+
+      <section id="states" class="panel">
+        <h2>Connection states</h2>
+        <table class="field-table">
+          <thead><tr><th>State</th><th>Meaning</th><th>Operational implications</th></tr></thead>
+          <tbody>
+            <tr><td>Requested</td><td>One organization has asked to connect and the other has not yet accepted or declined.</td><td>Not usable for incident sharing. Visibility settings that depend on this partner have no effect yet.</td></tr>
+            <tr><td>Connected</td><td>The relationship is active and supports partner-oriented visibility decisions.</td><td>Reports scoped to "selected partners" or to a trust group containing this partner are shared per visibility rules.</td></tr>
+            <tr><td>Declined</td><td>The receiving organization rejected the request.</td><td>No sharing. A new request can be initiated later if circumstances change.</td></tr>
+            <tr><td>Revoked</td><td>A previously active relationship was intentionally ended.</td><td>Future sharing stops. Past shared records remain with the partner unless separately removed.</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Do not rely on a <strong>requested</strong> relationship for operational sharing until your team confirms readiness and the connection state. A reviewer who selects a partner before connection is established will not produce a shared record.</p>
+      </section>
+
+      <section id="lifecycle" class="panel">
+        <h2>Relationship lifecycle</h2>
+        <p>A healthy partner connection moves through five stages. Each one corresponds to specific actions in the Castlewatch interface.</p>
+        <ol>
+          <li><strong>Vetting (offline).</strong> Confirm the partner organization is who they claim to be. Verify with a phone call, a regional coordinator, or an existing trusted partner.</li>
+          <li><strong>Request.</strong> Initiate the connection from your workspace, including any partner-specific notes.</li>
+          <li><strong>Receiving review.</strong> The receiving organization sees a pending request and either accepts or declines. Either side may include reviewer notes.</li>
+          <li><strong>Document tracking.</strong> Sign the template MOU and NDA if your operating posture requires them. Signature status and signer metadata are recorded against the relationship.</li>
+          <li><strong>Ongoing operation.</strong> Use partner messages for relationship-specific coordination. Re-confirm trust posture annually or after partner staffing changes.</li>
+        </ol>
+      </section>
+
+      <section id="documents" class="panel">
+        <h2>MOU &amp; NDA tracking</h2>
+        <p>Castlewatch tracks <strong>template MOU and NDA signature status</strong> and signer metadata. This is not full negotiated document management. It is a practical record that the template documents have been acknowledged and signed for the relationship.</p>
+        <table class="field-table">
+          <thead><tr><th>Field</th><th>Use</th></tr></thead>
+          <tbody>
+            <tr><td>Signer name</td><td>The full name of the individual who reviewed and signed.</td></tr>
+            <tr><td>Signer title</td><td>The role that authorizes them to sign on behalf of the organization.</td></tr>
+            <tr><td>Signer organization</td><td>Confirms which side of the relationship the signer represents.</td></tr>
+            <tr><td>Document version</td><td>Which template version was signed; preserves a useful audit trail when templates evolve.</td></tr>
+            <tr><td>Signed at</td><td>Timestamp the signature was recorded.</td></tr>
+          </tbody>
+        </table>
+        <ul>
+          <li>Preview the template before signing so the signer knows what is being recorded.</li>
+          <li>Use signer name, signer title, signer organization, and document version fields consistently.</li>
+          <li>Do not imply custom legal terms unless your organization has separately implemented and documented them.</li>
+          <li>Re-sign after a material template update.</li>
+        </ul>
+      </section>
+
+      <section id="messages" class="panel">
+        <h2>Partner messages</h2>
+        <p>Secure partner messages preserve relationship-specific coordination notes. Use them for partner onboarding questions, relationship readiness, follow-up requests, and clarification about shared incidents. Messages are scoped to the partner relationship and visible only to authorized members of each side.</p>
+        <h3>Use partner messages for</h3>
+        <ul>
+          <li>Confirming who the operational point-of-contact is during an incident.</li>
+          <li>Asking clarifying questions about a specific shared report.</li>
+          <li>Coordinating regional patrol cadence or shared events.</li>
+        </ul>
+        <h3>Do not use partner messages for</h3>
+        <ul>
+          <li>Internal team discussion &mdash; use incident comments or internal channels.</li>
+          <li>Sensitive personal data that should not be retained.</li>
+          <li>Time-critical alerts &mdash; use phone or your established emergency channel.</li>
+        </ul>
+      </section>
+
+      <section id="groups" class="panel">
+        <h2>Trust groups</h2>
+        <p>Trust groups organize connected partners into named coalitions for future incident visibility. A regional safety group, ministry network, or event-specific partner group can help teams avoid selecting the same organizations repeatedly.</p>
+        <ul class="checklist">
+          <li>Create groups only from organizations that are already connected.</li>
+          <li>Name groups in a way future administrators will understand (e.g., "East Metro Network", not "Tim's Friends").</li>
+          <li>Review default sharing settings after adding or removing group members.</li>
+          <li>Remove organizations from groups when the relationship or operating agreement changes.</li>
+          <li>Avoid creating one group per partner &mdash; groups should represent shared operating context, not 1:1 relationships.</li>
+        </ul>
+      </section>
+
+      <section id="scenarios" class="panel">
+        <h2>Common scenarios</h2>
+        <div class="scenarios">
+          <div class="scenario">
+            <h4>Partner request from an organization you do not recognize</h4>
+            <p>Do not accept based on the request alone. Confirm the requesting organization through a known regional coordinator or by direct phone contact. Decline if you cannot verify them &mdash; they can request again later.</p>
+          </div>
+          <div class="scenario">
+            <h4>Partner has changed leadership and may share less carefully now</h4>
+            <p>Revoke the connection, log a partner message documenting the change, and let leadership re-establish trust with a fresh request after the transition stabilizes.</p>
+          </div>
+          <div class="scenario">
+            <h4>Setting up a regional coalition</h4>
+            <p>Connect each member organization individually. Once every organization is in "Connected" state, create a trust group and add them. Update sharing defaults if most reports should reach the coalition by default.</p>
+          </div>
+          <div class="scenario">
+            <h4>Partner reports an incident that affects your campus</h4>
+            <p>Open the incident detail page, comment with your local observations, and log a sighting if your team has corroborating evidence. Coordinate next steps through partner messages.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="panel">
+        <h2>Frequently asked questions</h2>
+        <div class="faq">
+          <details>
+            <summary>Can a partner see all our reports?</summary>
+            <p>Only reports whose visibility scope explicitly includes them &mdash; either through "selected partners" or a trust group they belong to. Origin-only reports are never shared.</p>
+          </details>
+          <details>
+            <summary>What happens to past shared incidents if we revoke a partner?</summary>
+            <p>Past shared records remain with the partner unless separately removed; future sharing stops. Revoke deliberately rather than as a quick fix &mdash; consider a partner message first.</p>
+          </details>
+          <details>
+            <summary>Do we need MOU/NDA signatures to share?</summary>
+            <p>Functionally no &mdash; the platform does not block sharing without them. Operationally, most teams require both before sharing partner-scoped incidents. Decide your posture and document it.</p>
+          </details>
+          <details>
+            <summary>Can trust groups overlap?</summary>
+            <p>Yes. The same partner can belong to multiple groups (e.g., "East Metro Network" and "Summer Event Coalition"). Sharing decisions evaluate all applicable groups.</p>
+          </details>
+          <details>
+            <summary>Who can accept incoming partner requests?</summary>
+            <p>Determined by the <a href="../organization-settings/#policies">policy threshold for partner requests</a>. Default is org admin. Tighten if external requests should always be reviewed by leadership.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="related" class="panel">
+        <h2>Related articles</h2>
+        <div class="related-articles">
+          <a href="../organization-settings/"><span class="meta">Configuration</span><strong>Organization settings</strong>Policy thresholds, sharing defaults, and member management.</a>
+          <a href="../incident-reporting/"><span class="meta">Reporter</span><strong>Incident reporting</strong>Visibility choices, including selected partners and trust group.</a>
+          <a href="../review-workflow/"><span class="meta">Reviewer</span><strong>Review workflow</strong>How reviewers narrow or broaden partner visibility.</a>
+          <a href="../glossary/"><span class="meta">Reference</span><strong>Glossary</strong>Connection states, template MOU/NDA, sharing defaults.</a>
+        </div>
+      </section>
+
+      <nav class="prev-next" aria-label="Article navigation">
+        <a class="prev" href="../organization-settings/">
+          <span class="label">Previous</span>
+          <span class="title">Organization settings</span>
+        </a>
+        <a class="next" href="../incident-reporting/">
+          <span class="label">Next</span>
+          <span class="title">Incident reporting</span>
+        </a>
+      </nav>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <span class="footer-brand-mark" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          </span>
+          <span>Knightsbridge Risk</span>
+        </div>
+        <p>Protective security, tactical risk solutions, and the Castlewatch incident-coordination platform &mdash; engineered for trust-based teams.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../../#capabilities">Executive Protection</a></li>
+          <li><a href="../../#capabilities">Training Evaluation</a></li>
+          <li><a href="../../#capabilities">Red Team Testing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Castlewatch</h4>
+        <ul>
+          <li><a href="https://castlewatch.onrender.com/signup">Create workspace</a></li>
+          <li><a href="https://castlewatch.onrender.com/login">Log in</a></li>
+          <li><a href="../">Knowledge base</a></li>
+          <li><a href="../../user-guide/">User guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@knightsrisk.com">contact@knightsrisk.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Knightsbridge Risk Management. All rights reserved.</span>
+      <span>Discretion &middot; Pedigree &middot; Clarity</span>
+    </div>
+  </footer>
+</body>
+</html>

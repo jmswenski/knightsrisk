@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Incident Reporting | Castlewatch Knowledge Base</title>
+  <meta name="description" content="Detailed guidance for submitting structured Castlewatch incident reports with severity, site, visibility, tags, summary, and narrative.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon-180.png">
+  <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="nav-brand" href="../../">Knightsbridge Risk</a>
+      <div class="nav-links">
+        <a href="../">Knowledge Base</a>
+        <a href="../../user-guide/">User Guide</a>
+        <a href="https://castlewatch.onrender.com/login">Log in</a>
+        <a class="primary" href="https://castlewatch.onrender.com/signup">Sign up</a>
+      </div>
+    </nav>
+    <section class="hero">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../">Knowledge Base</a>
+        <span class="sep">/</span>
+        <a href="../#reporters">For Reporters</a>
+        <span class="sep">/</span>
+        <span class="current">Incident reporting</span>
+      </nav>
+      <span class="role-tag reporter">For Reporters</span>
+      <h1 style="margin-top:14px">Incident reporting</h1>
+      <p class="lead">A useful Castlewatch report is factual, scoped, searchable, and ready for reviewer action without forcing the reviewer to reconstruct basic context. This article walks through every field, how to set severity and visibility, and what good narratives look like.</p>
+    </section>
+  </header>
+
+  <main class="article-layout">
+    <aside class="toc">
+      <h2>On this page</h2>
+      <ol>
+        <li><a href="#purpose">Purpose</a></li>
+        <li><a href="#fields">Required fields</a></li>
+        <li><a href="#severity">Severity &amp; status</a></li>
+        <li><a href="#location">Location &amp; mapped sites</a></li>
+        <li><a href="#visibility">Visibility choices</a></li>
+        <li><a href="#narrative">Narrative writing</a></li>
+        <li><a href="#tags">Tags that help</a></li>
+        <li><a href="#quality">Quality checklist</a></li>
+        <li><a href="#scenarios">Scenarios</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#related">Related articles</a></li>
+      </ol>
+    </aside>
+
+    <article class="article-body">
+      <dl class="summary-box">
+        <div><dt>Audience</dt><dd>Reporters and members who occasionally submit incidents.</dd></div>
+        <div><dt>Time</dt><dd>~10 minutes for a complete report; under 2 minutes once familiar.</dd></div>
+        <div><dt>Read first</dt><dd>Workspace orientation from your administrator.</dd></div>
+        <div><dt>Read next</dt><dd><a href="../incident-records/" style="color:var(--accent)">Incident records</a> for what happens after submission.</dd></div>
+      </dl>
+
+      <section id="purpose" class="panel">
+        <h2>Purpose</h2>
+        <p>The reporting form captures an incident in a <strong>consistent structure</strong> so reviewers can decide what happened, what still needs clarification, and who should see the record. It is not just a free-text note. The structured fields power the dashboard, search, review queue, trusted partner visibility, and later incident history.</p>
+        <p>A well-written report saves the reviewer time, reduces back-and-forth, and produces a record future readers can actually use. A rushed report tends to come back as "request changes" and consume more time than it saved.</p>
+      </section>
+
+      <section id="fields" class="panel">
+        <h2>Required fields</h2>
+        <table class="field-table">
+          <thead><tr><th>Field</th><th>What to enter</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td>Title</td><td>A short label describing the operational issue.</td><td>"Suspicious vehicle near north entrance"</td></tr>
+            <tr><td>Summary</td><td>One paragraph: what happened and why it matters.</td><td>"At ~9:15 a black sedan circled the north lot three times. Driver photographed the entrance, then left when approached."</td></tr>
+            <tr><td>Detailed narrative</td><td>Chronology, observations, staff response, follow-up needs.</td><td>See <a href="#narrative">Narrative writing</a> below.</td></tr>
+            <tr><td>Incident type</td><td>Structured category for search and pattern recognition.</td><td>"Suspicious surveillance"</td></tr>
+            <tr><td>Occurred at</td><td>The event time, not the submission time.</td><td>"2026-05-18 09:15"</td></tr>
+            <tr><td>Mapped site</td><td>The saved site closest to the event.</td><td>"Main Campus &mdash; North Lot"</td></tr>
+            <tr><td>Severity</td><td>Potential impact and urgency. See <a href="#severity">Severity &amp; status</a>.</td><td>Medium</td></tr>
+            <tr><td>Visibility</td><td>Audience scope for the verified report. See <a href="#visibility">Visibility</a>.</td><td>Origin only</td></tr>
+            <tr><td>Tags</td><td>Searchable labels for patterns.</td><td>vehicle, photo, surveillance</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="severity" class="panel">
+        <h2>Severity &amp; operational status</h2>
+        <p><strong>Severity</strong> describes potential impact and urgency. <strong>Operational status</strong> describes what is still happening or needed. They are independent: a medium-severity report can still be open, and a high-severity report can be in monitoring if immediate action has already been taken.</p>
+        <table class="field-table">
+          <thead><tr><th>Severity</th><th>Use when</th><th>Examples</th></tr></thead>
+          <tbody>
+            <tr><td>Low</td><td>Notable but limited concern, usually no immediate escalation.</td><td>Lost item that may indicate a minor pattern; a brief verbal disagreement that was de-escalated.</td></tr>
+            <tr><td>Medium</td><td>Meaningful security concern requiring review or follow-up.</td><td>Suspicious surveillance; recurring trespasser; unusual after-hours access attempt.</td></tr>
+            <tr><td>High</td><td>Serious concern that may affect operations, safety posture, or partner awareness.</td><td>Threats made on premises; weapon sighting that did not escalate; significant trespass with evasive behavior.</td></tr>
+            <tr><td>Critical</td><td>Immediate or severe issue requiring expedited attention.</td><td>Active threat-of-violence statements; intrusion in progress; partner-facing safety alert.</td></tr>
+          </tbody>
+        </table>
+        <p class="note">When unsure between two levels, pick the higher one and let the reviewer adjust. Under-reporting severity is harder to recover from than over-reporting.</p>
+      </section>
+
+      <section id="location" class="panel">
+        <h2>Location &amp; mapped sites</h2>
+        <p>Use a <strong>saved mapped site</strong> whenever possible. Saved sites provide coordinates for the dashboard map and reduce ambiguity for reviewers. The campus or location detail should still describe the exact place involved: north entrance, children's wing, west parking lot, lobby, or off-site event location.</p>
+        <ul>
+          <li>Pick the closest mapped site that matches the event.</li>
+          <li>Add a free-text location detail to specify which entrance, lot, or room.</li>
+          <li>If the event happened off-site (transit, partner location), still record the closest meaningful site and explain the off-site context in the narrative.</li>
+        </ul>
+        <p class="note">If no saved site is selected, the report can still be submitted, but it may not appear on the incident map until a mapped site exists. See <a href="../organization-settings/#sites">Organization settings &rarr; Mapped sites</a> to add one.</p>
+      </section>
+
+      <section id="visibility" class="panel">
+        <h2>Visibility choices</h2>
+        <p>Visibility controls <strong>who should eventually be able to read the report</strong> after review. Use the narrowest option that supports the operational need. Reviewers can still narrow further during moderation.</p>
+        <table class="field-table">
+          <thead><tr><th>Visibility</th><th>Audience</th><th>Use for</th></tr></thead>
+          <tbody>
+            <tr><td>Origin only</td><td>Members of your organization with read access.</td><td>Internal-only events; events that need narrative clarity before any sharing.</td></tr>
+            <tr><td>Selected partners</td><td>Specific connected organizations.</td><td>Events directly relevant to one or two named partners (shared event, shared facility).</td></tr>
+            <tr><td>Trust group</td><td>All members of a named coalition.</td><td>Regional patterns: vehicle descriptions, recurring trespassers, coordinated activity across sites.</td></tr>
+            <tr><td>Region</td><td>Broader regional awareness audience.</td><td>Rare; reserved for events your administrator has agreed warrant region-wide awareness.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="narrative" class="panel">
+        <h2>Narrative writing</h2>
+        <p>The narrative is where most reviewer time is spent. A good narrative answers three questions in order: <strong>what was observed</strong>, <strong>what staff did</strong>, and <strong>what is still needed</strong>. Stick to direct observations; label assumptions clearly.</p>
+        <h3>Template</h3>
+        <ul>
+          <li><strong>Timeline:</strong> brief chronology with timestamps where possible.</li>
+          <li><strong>Direct observations:</strong> what was seen, heard, or measured &mdash; not interpretation.</li>
+          <li><strong>Staff response:</strong> who responded, what they did, who was notified internally.</li>
+          <li><strong>External involvement:</strong> law enforcement, partner staff, EMS, or facility management contact.</li>
+          <li><strong>Follow-up needs:</strong> what should happen next, by whom, by when.</li>
+        </ul>
+        <h3>Good vs. weak narratives</h3>
+        <div class="scenarios">
+          <div class="scenario">
+            <h4>Weak: "A guy was acting weird in the lot today."</h4>
+            <p>No timeline, no observable detail, no response, no follow-up. The reviewer cannot decide severity or visibility from this.</p>
+          </div>
+          <div class="scenario">
+            <h4>Better: structured narrative</h4>
+            <p>"At ~14:20 a male individual (estimated 30s, dark hoodie, no visible affiliation) circled the south lot on foot for 6&ndash;8 minutes, stopping near each of three doors. When greeter A approached at 14:28 he walked toward Maple Ave and left on foot. No verbal contact was made. Greeter A notified the lead usher and logged this report. Suggested follow-up: review camera footage 14:15&ndash;14:35; flag if pattern recurs Saturday evenings."</p>
+            <p>This narrative gives a reviewer enough to verify, assign tags, and decide on visibility.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="tags" class="panel">
+        <h2>Tags that help</h2>
+        <p>Tags are how patterns become visible months later. Use tags that <strong>a future reviewer would search for</strong>, not tags that just describe today's report.</p>
+        <ul>
+          <li><strong>Subject tags:</strong> vehicle, foot, group, lone-individual.</li>
+          <li><strong>Behavior tags:</strong> surveillance, threat-statement, trespass, repeat-pattern.</li>
+          <li><strong>Population tags:</strong> children, volunteers, contractors, partner-staff.</li>
+          <li><strong>Site tags:</strong> parking, entrance, perimeter, off-site.</li>
+        </ul>
+        <p class="note">If your organization keeps a tag dictionary, follow it. If not, ask a reviewer for the five or six tags they use most often and start there.</p>
+      </section>
+
+      <section id="quality" class="panel">
+        <h2>Quality checklist</h2>
+        <ul class="checklist">
+          <li>State only what was observed directly; label assumptions as assumptions.</li>
+          <li>Include event time, location, and staff response.</li>
+          <li>Avoid unnecessary personal identifiers unless they are operationally relevant.</li>
+          <li>Add tags a future reviewer would search for.</li>
+          <li>Choose visibility intentionally rather than leaving broad sharing on by habit.</li>
+          <li>Re-read the narrative once before submitting &mdash; you will catch most ambiguity yourself.</li>
+        </ul>
+      </section>
+
+      <section id="scenarios" class="panel">
+        <h2>Common scenarios</h2>
+        <div class="scenarios">
+          <div class="scenario">
+            <h4>You are reporting after the fact (yesterday's event)</h4>
+            <p>Use the actual occurred-at time, not today's date. Note in the narrative why the report is late ("noticed pattern when reviewing footage today"). Reviewers handle late reports differently than active ones.</p>
+          </div>
+          <div class="scenario">
+            <h4>You witnessed a partner organization's event</h4>
+            <p>File the report in your own workspace with origin-only visibility, then use partner messages to notify the affected partner. Let the partner decide whether to escalate within their workspace.</p>
+          </div>
+          <div class="scenario">
+            <h4>The event involved a member of your own team</h4>
+            <p>Submit using neutral, factual language. Use origin-only visibility. Avoid speculative personal commentary. A reviewer will decide how to handle the record from there.</p>
+          </div>
+          <div class="scenario">
+            <h4>Severity feels ambiguous</h4>
+            <p>Pick the higher level. Add a comment after submission explaining the uncertainty so the reviewer can downgrade with context.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="panel">
+        <h2>Frequently asked questions</h2>
+        <div class="faq">
+          <details>
+            <summary>What if I don't know the exact occurred-at time?</summary>
+            <p>Use the best approximation and note the uncertainty in the narrative ("~14:20, between 2:15 and 2:30"). Do not leave the field blank or use the submission time as a stand-in.</p>
+          </details>
+          <details>
+            <summary>Can I edit a report after submitting?</summary>
+            <p>Limited fields can be edited before a reviewer claims the report. After review starts, ask the reviewer to <em>request changes</em>, which returns the report to you for edits.</p>
+          </details>
+          <details>
+            <summary>Should I attach photos?</summary>
+            <p>Yes when they materially clarify the event. Avoid attaching general or sensitive material. See <a href="../incident-records/#attachments">Incident records &rarr; Attachments</a>.</p>
+          </details>
+          <details>
+            <summary>Will the subject of my report see it?</summary>
+            <p>No. Castlewatch does not notify report subjects. Visibility controls who in your workspace and partner network can read the verified record.</p>
+          </details>
+          <details>
+            <summary>The submit button isn't working &mdash; what now?</summary>
+            <p>Check for a red field validation message or a toast at the top of the page. The most common cause is a missing required field. If the form is otherwise complete, see <a href="../troubleshooting/#reports">Troubleshooting &rarr; Blocked reports</a>.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="related" class="panel">
+        <h2>Related articles</h2>
+        <div class="related-articles">
+          <a href="../incident-records/"><span class="meta">Next step</span><strong>Incident records</strong>What the report becomes after submission.</a>
+          <a href="../review-workflow/"><span class="meta">Reviewer</span><strong>Review workflow</strong>How your report is evaluated.</a>
+          <a href="../notifications-access/"><span class="meta">Access</span><strong>Notifications</strong>How alerts behave after you submit.</a>
+          <a href="../glossary/"><span class="meta">Reference</span><strong>Glossary</strong>Severity, visibility, tags, sighting.</a>
+        </div>
+      </section>
+
+      <nav class="prev-next" aria-label="Article navigation">
+        <a class="prev" href="../trusted-partners/">
+          <span class="label">Previous</span>
+          <span class="title">Trusted partners</span>
+        </a>
+        <a class="next" href="../incident-records/">
+          <span class="label">Next</span>
+          <span class="title">Incident records</span>
+        </a>
+      </nav>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <span class="footer-brand-mark" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          </span>
+          <span>Knightsbridge Risk</span>
+        </div>
+        <p>Protective security, tactical risk solutions, and the Castlewatch incident-coordination platform &mdash; engineered for trust-based teams.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../../#capabilities">Executive Protection</a></li>
+          <li><a href="../../#capabilities">Training Evaluation</a></li>
+          <li><a href="../../#capabilities">Red Team Testing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Castlewatch</h4>
+        <ul>
+          <li><a href="https://castlewatch.onrender.com/signup">Create workspace</a></li>
+          <li><a href="https://castlewatch.onrender.com/login">Log in</a></li>
+          <li><a href="../">Knowledge base</a></li>
+          <li><a href="../../user-guide/">User guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@knightsrisk.com">contact@knightsrisk.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Knightsbridge Risk Management. All rights reserved.</span>
+      <span>Discretion &middot; Pedigree &middot; Clarity</span>
+    </div>
+  </footer>
+</body>
+</html>

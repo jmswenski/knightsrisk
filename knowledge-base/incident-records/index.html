@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Incident Records, Comments, Sightings &amp; Attachments | Castlewatch Knowledge Base</title>
+  <meta name="description" content="How Castlewatch incident detail pages organize the narrative, comments, sightings, attachments, and structured record metadata.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon-180.png">
+  <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="nav-brand" href="../../">Knightsbridge Risk</a>
+      <div class="nav-links">
+        <a href="../">Knowledge Base</a>
+        <a href="../../user-guide/">User Guide</a>
+        <a href="https://castlewatch.onrender.com/login">Log in</a>
+        <a class="primary" href="https://castlewatch.onrender.com/signup">Sign up</a>
+      </div>
+    </nav>
+    <section class="hero">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../">Knowledge Base</a>
+        <span class="sep">/</span>
+        <a href="../#reporters">For Reporters</a>
+        <span class="sep">/</span>
+        <span class="current">Incident records</span>
+      </nav>
+      <span class="role-tag reporter">Reporters &amp; Reviewers</span>
+      <h1 style="margin-top:14px">Incident records, comments, sightings &amp; attachments</h1>
+      <p class="lead">The incident detail page is the durable record for one event. It combines the submitted narrative, issue-style comments, operational timeline, classification, and supporting files into a single auditable history.</p>
+    </section>
+  </header>
+
+  <main class="article-layout">
+    <aside class="toc">
+      <h2>On this page</h2>
+      <ol>
+        <li><a href="#purpose">Purpose</a></li>
+        <li><a href="#record">Record anatomy</a></li>
+        <li><a href="#comments">Comments</a></li>
+        <li><a href="#sightings">Sightings &amp; timeline</a></li>
+        <li><a href="#attachments">Attachments</a></li>
+        <li><a href="#maintenance">Record maintenance</a></li>
+        <li><a href="#scenarios">Scenarios</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#related">Related articles</a></li>
+      </ol>
+    </aside>
+
+    <article class="article-body">
+      <dl class="summary-box">
+        <div><dt>Audience</dt><dd>Reporters and reviewers working with submitted incidents.</dd></div>
+        <div><dt>Read first</dt><dd><a href="../incident-reporting/" style="color:var(--accent)">Incident reporting</a> for how the record is created.</dd></div>
+        <div><dt>Companion</dt><dd><a href="../review-workflow/" style="color:var(--accent)">Review workflow</a> for moderation decisions.</dd></div>
+        <div><dt>Mindset</dt><dd>This page is operational history &mdash; treat it like an audit log, not a chat thread.</dd></div>
+      </dl>
+
+      <section id="purpose" class="panel">
+        <h2>Purpose</h2>
+        <p>The incident detail page is the <strong>durable operating record</strong> for one event. Everything connected to the incident &mdash; narrative, moderation decisions, follow-up sightings, supporting files, and comments &mdash; lives on this page so future readers can reconstruct what happened and why.</p>
+        <p>Use the page like an issue tracker entry, not a chat room. The audience includes people who were not present when the event occurred and may read it months later.</p>
+      </section>
+
+      <section id="record" class="panel">
+        <h2>Record anatomy</h2>
+        <p>An incident record is organized into structured fields and freeform content. Knowing which is which helps you decide where to put information.</p>
+        <h3>Structured fields</h3>
+        <table class="field-table">
+          <thead><tr><th>Field</th><th>Source</th><th>Changes after submission?</th></tr></thead>
+          <tbody>
+            <tr><td>Title</td><td>Reporter</td><td>Reviewer may request changes.</td></tr>
+            <tr><td>Occurred at</td><td>Reporter</td><td>Reviewer may correct after clarification.</td></tr>
+            <tr><td>Mapped site &amp; location detail</td><td>Reporter</td><td>Reviewer may correct.</td></tr>
+            <tr><td>Severity</td><td>Reporter, adjusted by reviewer</td><td>Yes &mdash; reviewer may up- or down-grade with a comment.</td></tr>
+            <tr><td>Operational status</td><td>Reporter, adjusted by reviewer</td><td>Yes &mdash; moves between open, monitoring, resolved.</td></tr>
+            <tr><td>Visibility</td><td>Reporter, adjusted by reviewer</td><td>Yes &mdash; reviewer may narrow or broaden during moderation.</td></tr>
+            <tr><td>Tags</td><td>Reporter, augmented by reviewer</td><td>Reviewer may add or correct tags.</td></tr>
+            <tr><td>Moderation state</td><td>System &amp; reviewer actions</td><td>Yes &mdash; transitions through submitted, under review, verified, etc.</td></tr>
+            <tr><td>Reviewer assignment</td><td>Claim action</td><td>Yes &mdash; reassignment is allowed.</td></tr>
+          </tbody>
+        </table>
+        <h3>Freeform content</h3>
+        <ul>
+          <li><strong>Narrative</strong> &mdash; the reporter's structured description.</li>
+          <li><strong>Comments</strong> &mdash; reviewer and team discussion threaded under the record.</li>
+          <li><strong>Sightings</strong> &mdash; operational follow-up events along the timeline.</li>
+          <li><strong>Attachments</strong> &mdash; supporting files.</li>
+        </ul>
+        <p class="note">Treat the record as operational history. Avoid casual discussion that would not help a future reviewer, administrator, or partner understand the event.</p>
+      </section>
+
+      <section id="comments" class="panel">
+        <h2>Comments</h2>
+        <p>Comments appear under the incident body like an issue-tracker thread. Use them for <strong>reviewer context</strong>, clarification notes, operational observations, and decisions that should remain tied to the incident. Comments should explain <em>why</em> something was done, not just <em>that</em> it happened.</p>
+        <h3>Comment when</h3>
+        <ul>
+          <li>Visibility is narrowed or broadened &mdash; record the reason.</li>
+          <li>A reviewer verifies a report after resolving ambiguity &mdash; note what was clarified.</li>
+          <li>A partner or internal team member needs context for later action.</li>
+          <li>Severity is adjusted &mdash; explain the basis for the change.</li>
+          <li>A duplicate or related incident is identified &mdash; link by ID.</li>
+        </ul>
+        <h3>Don't comment for</h3>
+        <ul>
+          <li>Asking the reporter to fix something &mdash; use <em>request changes</em> in the review workflow instead.</li>
+          <li>Unrelated team chatter &mdash; use your internal coordination channel.</li>
+          <li>Operational follow-up observations &mdash; log a sighting instead.</li>
+        </ul>
+      </section>
+
+      <section id="sightings" class="panel">
+        <h2>Sightings &amp; timeline</h2>
+        <p>Use the timeline to log <strong>follow-up sightings</strong>: patrol confirmations, witness updates, recurrence of the same subject or vehicle, or later operational observations. A sighting should include what was observed, where, and when.</p>
+        <h3>Sighting fields</h3>
+        <table class="field-table">
+          <thead><tr><th>Field</th><th>What to enter</th></tr></thead>
+          <tbody>
+            <tr><td>Observed at</td><td>The time of the new observation, not the time of logging.</td></tr>
+            <tr><td>Location detail</td><td>Where on the site or in the surrounding area; mapped site if applicable.</td></tr>
+            <tr><td>Description</td><td>What was observed and how it connects to the original report.</td></tr>
+            <tr><td>Reporter</td><td>The Castlewatch user who observed or logged the sighting.</td></tr>
+          </tbody>
+        </table>
+        <p class="note">The timeline is not the place for broad discussion &mdash; use comments for discussion and sightings for event updates.</p>
+      </section>
+
+      <section id="attachments" class="panel">
+        <h2>Attachments</h2>
+        <p>Attachments can support the incident record with documents, photos, exported evidence, or other files. Only upload files that are appropriate for the organization to retain and review. Avoid unnecessary sensitive material, and use the <strong>smallest file set</strong> that supports the operational need.</p>
+        <h3>Good practices</h3>
+        <ul>
+          <li>Name files clearly before upload: <code>north-lot-14-20-vehicle-1.jpg</code>, not <code>IMG_4839.jpg</code>.</li>
+          <li>Do not upload unrelated evidence just because it exists.</li>
+          <li>Remove incorrect attachments promptly if your role allows it.</li>
+          <li>Crop personally identifying information out of images when it is not operationally relevant.</li>
+          <li>Prefer exported reports (PDF) over raw screenshots when possible &mdash; smaller and easier to review.</li>
+        </ul>
+        <h3>What not to attach</h3>
+        <ul>
+          <li>Photos of minors without explicit authorization.</li>
+          <li>Documents containing unrelated personal data.</li>
+          <li>Large unprocessed video files &mdash; export a clip or still frame instead.</li>
+        </ul>
+      </section>
+
+      <section id="maintenance" class="panel">
+        <h2>Record maintenance</h2>
+        <ul class="checklist">
+          <li>Keep comments factual and concise.</li>
+          <li>Use timeline sightings for observed follow-up events.</li>
+          <li>Use attachments only when they add operational value.</li>
+          <li>Review tags and classification if a report becomes part of a larger pattern.</li>
+          <li>Return to the review workflow when facts or visibility need formal moderation.</li>
+          <li>Resolve operational status (open &rarr; monitoring &rarr; resolved) as the situation evolves.</li>
+        </ul>
+      </section>
+
+      <section id="scenarios" class="panel">
+        <h2>Common scenarios</h2>
+        <div class="scenarios">
+          <div class="scenario">
+            <h4>The same vehicle returns the next week</h4>
+            <p>Log a sighting on the original incident timeline rather than filing a new report. Include the new observation time, location, and a brief note connecting it to the original event. If the pattern becomes substantial, escalate via comment and consider re-visibility.</p>
+          </div>
+          <div class="scenario">
+            <h4>You realized the narrative had an error after submission</h4>
+            <p>If a reviewer has not yet claimed it, you can edit limited fields directly. Otherwise, comment with the correction and ask the reviewer to <em>request changes</em> so you can amend the narrative cleanly.</p>
+          </div>
+          <div class="scenario">
+            <h4>A partner asks for the original report</h4>
+            <p>Confirm the partner is connected and visibility includes them. If not, broaden visibility deliberately via the review workflow &mdash; do not paste the narrative into a partner message.</p>
+          </div>
+          <div class="scenario">
+            <h4>An attachment was uploaded by mistake</h4>
+            <p>Remove it if your role allows, then comment briefly noting the removal. If you cannot remove it yourself, ask a reviewer or administrator.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="panel">
+        <h2>Frequently asked questions</h2>
+        <div class="faq">
+          <details>
+            <summary>Can incidents be deleted?</summary>
+            <p>Not as a general user action. Reports can be rejected during review or marked rejected later by an authorized reviewer. Genuine deletion is rare and reserved for accidental submissions or legal-compliance requirements; ask your administrator.</p>
+          </details>
+          <details>
+            <summary>How long are records kept?</summary>
+            <p>Indefinitely by default. Your organization's data retention policy should govern when records are archived or removed. Discuss with your administrator if you have specific retention requirements.</p>
+          </details>
+          <details>
+            <summary>Can comments be edited or deleted?</summary>
+            <p>Authors may edit or delete their own comments shortly after posting. Older comments are part of the audit record and should not be edited &mdash; post a follow-up correction instead.</p>
+          </details>
+          <details>
+            <summary>Who can add sightings?</summary>
+            <p>Reviewers and members with access to the incident. Subject to your organization's role configuration.</p>
+          </details>
+          <details>
+            <summary>Will partners see comments?</summary>
+            <p>Comments are visible to the same audience that can see the incident record. If you want a comment to remain internal, mention that explicitly in the text and consider whether visibility should be narrowed.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="related" class="panel">
+        <h2>Related articles</h2>
+        <div class="related-articles">
+          <a href="../incident-reporting/"><span class="meta">Reporter</span><strong>Incident reporting</strong>How the record is created.</a>
+          <a href="../review-workflow/"><span class="meta">Reviewer</span><strong>Review workflow</strong>Moderation states and reviewer actions.</a>
+          <a href="../trusted-partners/"><span class="meta">Trust</span><strong>Trusted partners</strong>Who sees the record under each visibility scope.</a>
+          <a href="../glossary/"><span class="meta">Reference</span><strong>Glossary</strong>Sighting, attachment, severity, operational status.</a>
+        </div>
+      </section>
+
+      <nav class="prev-next" aria-label="Article navigation">
+        <a class="prev" href="../incident-reporting/">
+          <span class="label">Previous</span>
+          <span class="title">Incident reporting</span>
+        </a>
+        <a class="next" href="../review-workflow/">
+          <span class="label">Next</span>
+          <span class="title">Review workflow</span>
+        </a>
+      </nav>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <span class="footer-brand-mark" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          </span>
+          <span>Knightsbridge Risk</span>
+        </div>
+        <p>Protective security, tactical risk solutions, and the Castlewatch incident-coordination platform &mdash; engineered for trust-based teams.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../../#capabilities">Executive Protection</a></li>
+          <li><a href="../../#capabilities">Training Evaluation</a></li>
+          <li><a href="../../#capabilities">Red Team Testing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Castlewatch</h4>
+        <ul>
+          <li><a href="https://castlewatch.onrender.com/signup">Create workspace</a></li>
+          <li><a href="https://castlewatch.onrender.com/login">Log in</a></li>
+          <li><a href="../">Knowledge base</a></li>
+          <li><a href="../../user-guide/">User guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@knightsrisk.com">contact@knightsrisk.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Knightsbridge Risk Management. All rights reserved.</span>
+      <span>Discretion &middot; Pedigree &middot; Clarity</span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Queue &amp; Moderation | Castlewatch Knowledge Base</title>
+  <meta name="description" content="How Castlewatch reviewers claim, verify, reject, request changes, and document moderation decisions.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon-180.png">
+  <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="nav-brand" href="../../">Knightsbridge Risk</a>
+      <div class="nav-links">
+        <a href="../">Knowledge Base</a>
+        <a href="../../user-guide/">User Guide</a>
+        <a href="https://castlewatch.onrender.com/login">Log in</a>
+        <a class="primary" href="https://castlewatch.onrender.com/signup">Sign up</a>
+      </div>
+    </nav>
+    <section class="hero">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../">Knowledge Base</a>
+        <span class="sep">/</span>
+        <a href="../#reviewers">For Reviewers</a>
+        <span class="sep">/</span>
+        <span class="current">Review workflow</span>
+      </nav>
+      <span class="role-tag reviewer">For Reviewers</span>
+      <h1 style="margin-top:14px">Review queue &amp; moderation</h1>
+      <p class="lead">The review queue exists to keep incident sharing deliberate. Reviewers verify, request clarification, reject, or return records to review using explicit state transitions &mdash; and document why for the next reviewer.</p>
+    </section>
+  </header>
+
+  <main class="article-layout">
+    <aside class="toc">
+      <h2>On this page</h2>
+      <ol>
+        <li><a href="#purpose">Purpose</a></li>
+        <li><a href="#states">Moderation states</a></li>
+        <li><a href="#actions">Reviewer actions</a></li>
+        <li><a href="#flow">Decision flow</a></li>
+        <li><a href="#notes">Reviewer notes</a></li>
+        <li><a href="#criteria">Verification criteria</a></li>
+        <li><a href="#scenarios">Scenarios</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#related">Related articles</a></li>
+      </ol>
+    </aside>
+
+    <article class="article-body">
+      <dl class="summary-box">
+        <div><dt>Audience</dt><dd>Reviewers and senior members responsible for moderation.</dd></div>
+        <div><dt>Read first</dt><dd><a href="../incident-reporting/" style="color:var(--accent)">Incident reporting</a> &mdash; you are evaluating output of that process.</dd></div>
+        <div><dt>Read next</dt><dd><a href="../incident-records/" style="color:var(--accent)">Incident records</a> for what happens after verification.</dd></div>
+        <div><dt>Mindset</dt><dd>Every decision is recorded. Move deliberately and preserve the reason.</dd></div>
+      </dl>
+
+      <section id="purpose" class="panel">
+        <h2>Purpose</h2>
+        <p>The review queue is the operating surface for reports that need <strong>human judgment</strong> before they move wider. The queue helps reviewers focus on severity, status, report quality, and whether the selected audience is appropriate. Review actions happen on-page with success or error feedback, so reviewers should wait for the visible confirmation before moving to the next decision.</p>
+        <p>Reviewers do three jobs at once: verify the facts are believable and complete, ensure visibility is appropriate, and preserve enough context that a later reviewer can understand the decision.</p>
+      </section>
+
+      <section id="states" class="panel">
+        <h2>Moderation states</h2>
+        <table class="field-table">
+          <thead><tr><th>State</th><th>Meaning</th><th>Can transition to</th></tr></thead>
+          <tbody>
+            <tr><td>Submitted</td><td>The report has entered the workflow but is not yet claimed or resolved.</td><td>Under review (via claim).</td></tr>
+            <tr><td>Under review</td><td>A reviewer has claimed or reclaimed the report and is evaluating it.</td><td>Changes requested, verified, rejected.</td></tr>
+            <tr><td>Changes requested</td><td>The report needs clarification or correction before verification.</td><td>Under review (when the reporter resubmits).</td></tr>
+            <tr><td>Verified</td><td>The report is accepted for the selected visibility scope and becomes part of the durable record.</td><td>Under review (via return to review).</td></tr>
+            <tr><td>Rejected</td><td>The report should not proceed as an operational incident record.</td><td>Under review (via return to review, rare).</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="actions" class="panel">
+        <h2>Reviewer actions</h2>
+        <table class="field-table">
+          <thead><tr><th>Action</th><th>Use when</th><th>Always pair with</th></tr></thead>
+          <tbody>
+            <tr><td>Claim</td><td>You will own the next decision on this report.</td><td>A glance at the narrative; do not claim what you will not handle.</td></tr>
+            <tr><td>Request changes</td><td>Missing facts, unclear narrative, wrong severity, or inappropriate visibility.</td><td>A comment explaining exactly what needs to change.</td></tr>
+            <tr><td>Verify</td><td>The report is ready for its intended audience and future search.</td><td>A comment if anything material was clarified or adjusted.</td></tr>
+            <tr><td>Reject</td><td>Duplicate, out of scope, unsupported, or not appropriate for an incident record.</td><td>A comment explaining the reason; link the related incident if duplicate.</td></tr>
+            <tr><td>Return to review</td><td>A previously closed report needs additional redaction, clarification, or operational judgment.</td><td>A comment explaining why the record is being reopened.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="flow" class="panel">
+        <h2>Decision flow</h2>
+        <p>Most reports follow one of three paths. Knowing the typical decision flow speeds the queue and reduces churn.</p>
+        <ol>
+          <li><strong>Quick verify.</strong> Report is complete, severity is right, visibility is appropriate. Verify with optional comment.</li>
+          <li><strong>Request changes &rarr; verify.</strong> Report is mostly good but missing a fact or has wrong severity/visibility. Request changes with a specific comment, wait for resubmission, then verify.</li>
+          <li><strong>Reject.</strong> Report is a duplicate, out of scope, or not an operational record (test entry, personal complaint without security relevance). Reject with comment.</li>
+        </ol>
+        <p>Edge cases:</p>
+        <ul>
+          <li><strong>Hold for context.</strong> Sometimes a report needs an external check before verification (camera footage, partner confirmation). Leave the report in "under review" and comment on what you are waiting for. Reclaim or hand off as appropriate.</li>
+          <li><strong>Return to review.</strong> After verification, new facts may justify reopening &mdash; e.g., personal information should be redacted, or visibility was too broad. Return to review and adjust.</li>
+        </ul>
+      </section>
+
+      <section id="notes" class="panel">
+        <h2>Reviewer notes</h2>
+        <p>Use comments to <strong>preserve why a decision was made</strong>. A good note is short, factual, and useful to the next reviewer. Add a note when severity was changed, clarification was requested, visibility was narrowed, or a report was verified despite minor missing details.</p>
+        <h3>Examples</h3>
+        <div class="scenarios">
+          <div class="scenario">
+            <h4>Severity adjusted</h4>
+            <p>"Downgraded medium &rarr; low &mdash; subject left immediately and no follow-up needed. Greeter handled appropriately."</p>
+          </div>
+          <div class="scenario">
+            <h4>Visibility narrowed</h4>
+            <p>"Visibility narrowed from trust group to origin-only. Reason: narrative mentions a partner staff member; will share via partner message instead."</p>
+          </div>
+          <div class="scenario">
+            <h4>Verified with caveat</h4>
+            <p>"Verified. Occurred-at time is approximate; greeter A confirmed within ±10 minutes of stated time."</p>
+          </div>
+        </div>
+        <p class="note">Do not use comments as a replacement for fixing a poor report. If the narrative is unclear or the location is wrong, <strong>request changes</strong> instead.</p>
+      </section>
+
+      <section id="criteria" class="panel">
+        <h2>Verification criteria</h2>
+        <ul class="checklist">
+          <li>The report has a clear title, summary, and narrative.</li>
+          <li>The severity and operational status match the actual situation.</li>
+          <li>The location is specific enough for follow-up.</li>
+          <li>Visibility is no broader than necessary.</li>
+          <li>Unnecessary personal identifiers have been avoided or removed.</li>
+          <li>Any remaining assumptions are clearly labeled.</li>
+          <li>Tags are present and useful for future search.</li>
+        </ul>
+      </section>
+
+      <section id="scenarios" class="panel">
+        <h2>Common scenarios</h2>
+        <div class="scenarios">
+          <div class="scenario">
+            <h4>The reporter described an interpretation, not an observation</h4>
+            <p>Request changes with a specific ask: replace "he was acting suspicious" with what the person actually did. Provide an example if helpful.</p>
+          </div>
+          <div class="scenario">
+            <h4>Severity feels too high</h4>
+            <p>Adjust severity yourself, comment with the reasoning, then verify. Down-grading after the fact is the reviewer's call. Do not request changes purely for severity.</p>
+          </div>
+          <div class="scenario">
+            <h4>The report duplicates an open incident</h4>
+            <p>Reject with a comment linking the original incident ID. Add a sighting on the original record with any new observations from the duplicate.</p>
+          </div>
+          <div class="scenario">
+            <h4>You're conflicted &mdash; verify or reject?</h4>
+            <p>If the underlying event is real and operationally relevant, verify with origin-only visibility and a note explaining the limits. Rejecting a real event because the writeup is rough loses the record entirely.</p>
+          </div>
+          <div class="scenario">
+            <h4>You claimed but can't finish today</h4>
+            <p>Comment that you are unavailable and unclaim, or hand off to another reviewer by name. Do not leave the report in "under review" without context overnight.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="panel">
+        <h2>Frequently asked questions</h2>
+        <div class="faq">
+          <details>
+            <summary>Can two reviewers claim the same report?</summary>
+            <p>Claim is exclusive; reassignment is allowed. If two reviewers want to collaborate, one claims and the other comments.</p>
+          </details>
+          <details>
+            <summary>Should I verify my own reports?</summary>
+            <p>Avoid it when possible. A second reviewer's eyes catch most of the issues a self-review misses. For very small teams where it is unavoidable, comment explicitly that the reporter and reviewer are the same person.</p>
+          </details>
+          <details>
+            <summary>What if I changed visibility but later realized it was wrong?</summary>
+            <p>Return the record to review and adjust. Comment with the new reason. Past disclosures already made cannot be unmade &mdash; future visibility is what you control.</p>
+          </details>
+          <details>
+            <summary>How do I handle a partner-submitted report I cannot verify?</summary>
+            <p>Partners do not submit into your queue &mdash; they submit in their own workspace. If you received a partner-shared record and disagree with content, raise it via partner message; do not edit their record.</p>
+          </details>
+          <details>
+            <summary>Is there an SLA for review?</summary>
+            <p>The platform does not enforce one. Your organization should set an internal target (e.g., low/medium within 48 hours, high within 4 hours, critical within minutes). Document it where reviewers see it.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="related" class="panel">
+        <h2>Related articles</h2>
+        <div class="related-articles">
+          <a href="../incident-records/"><span class="meta">Workspace</span><strong>Incident records</strong>Where verified records continue to evolve.</a>
+          <a href="../incident-reporting/"><span class="meta">Reporter</span><strong>Incident reporting</strong>Understand what reporters are working from.</a>
+          <a href="../trusted-partners/"><span class="meta">Trust</span><strong>Trusted partners</strong>How visibility decisions translate to partner audiences.</a>
+          <a href="../glossary/"><span class="meta">Reference</span><strong>Glossary</strong>Moderation states, severity, visibility.</a>
+        </div>
+      </section>
+
+      <nav class="prev-next" aria-label="Article navigation">
+        <a class="prev" href="../incident-records/">
+          <span class="label">Previous</span>
+          <span class="title">Incident records</span>
+        </a>
+        <a class="next" href="../notifications-access/">
+          <span class="label">Next</span>
+          <span class="title">Notifications &amp; access</span>
+        </a>
+      </nav>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <span class="footer-brand-mark" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          </span>
+          <span>Knightsbridge Risk</span>
+        </div>
+        <p>Protective security, tactical risk solutions, and the Castlewatch incident-coordination platform &mdash; engineered for trust-based teams.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../../#capabilities">Executive Protection</a></li>
+          <li><a href="../../#capabilities">Training Evaluation</a></li>
+          <li><a href="../../#capabilities">Red Team Testing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Castlewatch</h4>
+        <ul>
+          <li><a href="https://castlewatch.onrender.com/signup">Create workspace</a></li>
+          <li><a href="https://castlewatch.onrender.com/login">Log in</a></li>
+          <li><a href="../">Knowledge base</a></li>
+          <li><a href="../../user-guide/">User guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@knightsrisk.com">contact@knightsrisk.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Knightsbridge Risk Management. All rights reserved.</span>
+      <span>Discretion &middot; Pedigree &middot; Clarity</span>
+    </div>
+  </footer>
+</body>
+</html>

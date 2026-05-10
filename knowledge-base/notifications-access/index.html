@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications, Roles, Billing &amp; Access | Castlewatch Knowledge Base</title>
+  <meta name="description" content="Castlewatch guidance for notification settings, role access, subscription gates, account profile, password, chat visibility, and MFA.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon-180.png">
+  <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="nav-brand" href="../../">Knightsbridge Risk</a>
+      <div class="nav-links">
+        <a href="../">Knowledge Base</a>
+        <a href="../../user-guide/">User Guide</a>
+        <a href="https://castlewatch.onrender.com/login">Log in</a>
+        <a class="primary" href="https://castlewatch.onrender.com/signup">Sign up</a>
+      </div>
+    </nav>
+    <section class="hero">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../">Knowledge Base</a>
+        <span class="sep">/</span>
+        <a href="../#reference">Reference</a>
+        <span class="sep">/</span>
+        <span class="current">Notifications &amp; access</span>
+      </nav>
+      <span class="role-tag reference">All roles</span>
+      <h1 style="margin-top:14px">Notifications, roles, billing &amp; access</h1>
+      <p class="lead">Access in Castlewatch is organization-scoped. Notifications, billing state, roles, and account security all affect what a user can do and what they receive. Configure these intentionally before live operations.</p>
+    </section>
+  </header>
+
+  <main class="article-layout">
+    <aside class="toc">
+      <h2>On this page</h2>
+      <ol>
+        <li><a href="#roles">Role-based access</a></li>
+        <li><a href="#billing">Billing gates</a></li>
+        <li><a href="#notifications">Notifications</a></li>
+        <li><a href="#channels">Channels &amp; severity</a></li>
+        <li><a href="#account">Account settings</a></li>
+        <li><a href="#mfa">MFA &amp; sessions</a></li>
+        <li><a href="#security">Security posture</a></li>
+        <li><a href="#scenarios">Scenarios</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#related">Related articles</a></li>
+      </ol>
+    </aside>
+
+    <article class="article-body">
+      <dl class="summary-box">
+        <div><dt>Audience</dt><dd>Every user; especially administrators tuning org-wide defaults.</dd></div>
+        <div><dt>Read first</dt><dd><a href="../organization-settings/#notifications" style="color:var(--accent)">Org notification defaults</a> for the policy layer.</dd></div>
+        <div><dt>Companion</dt><dd><a href="../troubleshooting/#notifications" style="color:var(--accent)">Troubleshooting &rarr; Notifications</a>.</dd></div>
+        <div><dt>Outcome</dt><dd>Right people alerted for the right events without notification fatigue.</dd></div>
+      </dl>
+
+      <section id="roles" class="panel">
+        <h2>Role-based access</h2>
+        <p>Castlewatch roles determine which actions appear and which workflows are available. If a button or section is missing, role permissions should be checked before assuming the feature is unavailable. <strong>Organization policy thresholds</strong> can further restrict who manages members, partner requests, settings, and notification defaults.</p>
+        <p>Role hierarchy, lowest to highest privilege: <strong>Viewer &rarr; Reporter &rarr; Reviewer &rarr; Org Admin</strong>. See <a href="../organization-settings/#members">Organization settings &rarr; Members &amp; roles</a> for full capability reference.</p>
+      </section>
+
+      <section id="billing" class="panel">
+        <h2>Billing gates</h2>
+        <p>Some operational areas require an active subscription before live use. This protects the workspace from partial production operation. If reporting, moderation, incident access, or organization administration appears locked, confirm the organization's billing state and plan status.</p>
+        <h3>What is gated</h3>
+        <ul>
+          <li>Submitting incidents.</li>
+          <li>Reviewer actions (claim, verify, reject, request changes).</li>
+          <li>Trusted partner request initiation.</li>
+          <li>Some organization settings related to live operations.</li>
+        </ul>
+        <h3>What still works without active billing</h3>
+        <ul>
+          <li>Organization profile and basic configuration.</li>
+          <li>Adding mapped sites.</li>
+          <li>Reading the knowledge base and user guide.</li>
+          <li>Inviting members for evaluation.</li>
+        </ul>
+        <p class="note">Billing checkout and billing portal flows intentionally navigate away from the current page because they depend on a hosted payment or account management flow. Return to the workspace when complete.</p>
+      </section>
+
+      <section id="notifications" class="panel">
+        <h2>Notifications</h2>
+        <p>Notification behavior has <strong>two layers</strong>. Organization defaults define broad operating expectations. Personal alert preferences let each user control delivery per event, channel, severity threshold, quiet hours, and SMS destination when applicable.</p>
+        <h3>How the layers combine</h3>
+        <ol>
+          <li>The platform checks <strong>organization defaults</strong> to see if an event is enabled for the org at the chosen severity.</li>
+          <li>Then the user's <strong>personal preferences</strong> filter further &mdash; channel choice, quiet hours, opt-outs.</li>
+          <li>If both layers allow the notification, it is delivered.</li>
+        </ol>
+        <p>This means org defaults set the <em>maximum</em> alerting; personal preferences refine downward. A user cannot enable a notification their organization has disabled.</p>
+      </section>
+
+      <section id="channels" class="panel">
+        <h2>Channels &amp; severity</h2>
+        <p>Use each channel for the signal it suits best. Mixing them well is the difference between useful alerting and notification fatigue.</p>
+        <table class="field-table">
+          <thead><tr><th>Channel</th><th>Best for</th><th>Avoid for</th></tr></thead>
+          <tbody>
+            <tr><td>Email</td><td>Routine visibility, accountability, longer-form context.</td><td>Time-critical alerts; emails are not reliably real-time.</td></tr>
+            <tr><td>SMS</td><td>Higher-signal events where immediate awareness matters.</td><td>Routine notifications &mdash; will be ignored over time.</td></tr>
+            <tr><td>In-app</td><td>While the user is actively in the workspace.</td><td>Reaching off-duty staff.</td></tr>
+          </tbody>
+        </table>
+        <h3>Severity-channel pairing (typical)</h3>
+        <table class="field-table">
+          <thead><tr><th>Severity</th><th>Email</th><th>SMS</th></tr></thead>
+          <tbody>
+            <tr><td>Low</td><td>Yes (digest)</td><td>No</td></tr>
+            <tr><td>Medium</td><td>Yes</td><td>No, unless after-hours role</td></tr>
+            <tr><td>High</td><td>Yes</td><td>Yes for reviewers and on-call admin</td></tr>
+            <tr><td>Critical</td><td>Yes</td><td>Yes for everyone in the chain</td></tr>
+          </tbody>
+        </table>
+        <ul>
+          <li>Set quiet hours carefully so urgent notifications still reach the right people.</li>
+          <li>Always include a real SMS destination for users who opt in to SMS.</li>
+          <li>Configure quiet hours by role, not by individual schedule, when possible.</li>
+        </ul>
+      </section>
+
+      <section id="account" class="panel">
+        <h2>Account settings</h2>
+        <p>The account page manages profile details, sign-in posture, chat visibility, and personal notification preferences. Profile updates and alert preference changes happen on-page with visible success or error feedback.</p>
+        <table class="field-table">
+          <thead><tr><th>Setting</th><th>What it does</th></tr></thead>
+          <tbody>
+            <tr><td>Display name</td><td>How the user appears in incident records, comments, and partner messages.</td></tr>
+            <tr><td>Email</td><td>Sign-in identifier and email notification destination.</td></tr>
+            <tr><td>Chat visibility</td><td>Whether the user is visible in internal coordination channels.</td></tr>
+            <tr><td>SMS destination</td><td>Phone number receiving SMS notifications.</td></tr>
+            <tr><td>Personal alert preferences</td><td>Per-event opt-in, channel choice, severity threshold, quiet hours.</td></tr>
+            <tr><td>Password</td><td>Sign-in credential; changes revoke active sessions.</td></tr>
+            <tr><td>MFA</td><td>Authenticator-app multi-factor authentication.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="mfa" class="panel">
+        <h2>MFA &amp; sessions</h2>
+        <p>Castlewatch supports authenticator-app multi-factor authentication. Administrators and reviewers should enable MFA where possible because their actions affect the whole workspace.</p>
+        <h3>Enrollment</h3>
+        <ol>
+          <li>From the account page, start MFA enrollment.</li>
+          <li>Scan the displayed QR code with an authenticator app (1Password, Authy, Google Authenticator).</li>
+          <li>Enter the current six-digit code to confirm enrollment.</li>
+          <li>Save the recovery code somewhere your team can access without depending on the same device.</li>
+        </ol>
+        <h3>Session behavior</h3>
+        <ul>
+          <li>Password changes revoke all active sessions &mdash; you will be signed out everywhere.</li>
+          <li>MFA enrollment does not retroactively revoke sessions, but the next sign-in will require the code.</li>
+          <li>Sign out manually on shared devices.</li>
+        </ul>
+      </section>
+
+      <section id="security" class="panel">
+        <h2>Security posture</h2>
+        <ul class="checklist">
+          <li>Use recognizable display names and current email addresses.</li>
+          <li>Enable authenticator MFA for administrators and reviewers where possible.</li>
+          <li>Review role assignments after staffing changes.</li>
+          <li>Disable accounts that should no longer have operational access.</li>
+          <li>Keep chat visibility aligned with how the team uses internal coordination.</li>
+          <li>Maintain at least two org admins so the workspace is not single-person dependent.</li>
+        </ul>
+      </section>
+
+      <section id="scenarios" class="panel">
+        <h2>Common scenarios</h2>
+        <div class="scenarios">
+          <div class="scenario">
+            <h4>SMS alerts stop arriving</h4>
+            <p>Check the SMS destination field, then confirm the carrier has not flagged messages. Personal-preferences quiet hours may also be suppressing them. See <a href="../troubleshooting/#notifications">Troubleshooting &rarr; Notifications</a>.</p>
+          </div>
+          <div class="scenario">
+            <h4>You missed an incident overnight</h4>
+            <p>Adjust quiet hours, raise SMS severity threshold for your role to "high", and confirm org defaults include after-hours routing for that event type.</p>
+          </div>
+          <div class="scenario">
+            <h4>A new reviewer is not receiving alerts</h4>
+            <p>Confirm their personal preferences are configured (org defaults alone do not opt them in to non-default channels). Confirm their role is correctly set to reviewer.</p>
+          </div>
+          <div class="scenario">
+            <h4>You lost your phone with the MFA app</h4>
+            <p>Use the recovery code saved at enrollment. If unavailable, an org admin can disable MFA for your account so you can sign in and re-enroll. Re-enroll immediately after recovery.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="panel">
+        <h2>Frequently asked questions</h2>
+        <div class="faq">
+          <details>
+            <summary>Can users opt out of all notifications?</summary>
+            <p>Yes &mdash; though not recommended for active roles. Reviewers and administrators should keep at least critical-severity alerting on.</p>
+          </details>
+          <details>
+            <summary>Are notifications guaranteed to deliver?</summary>
+            <p>No system guarantees universal delivery. Treat notifications as best-effort and rely on workflow state (review queue, dashboard) for ground truth on urgent items.</p>
+          </details>
+          <details>
+            <summary>Do partners see our notifications?</summary>
+            <p>Partners are notified independently in their own workspace, subject to their own settings. Your notifications are private to your organization.</p>
+          </details>
+          <details>
+            <summary>Can two users share an account?</summary>
+            <p>No. Each user has their own account so authorship and notifications are traceable. Shared accounts break the audit trail.</p>
+          </details>
+          <details>
+            <summary>What happens to notifications when billing lapses?</summary>
+            <p>Live operational alerts may be suppressed until billing is reactivated. Administrative emails continue.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="related" class="panel">
+        <h2>Related articles</h2>
+        <div class="related-articles">
+          <a href="../organization-settings/"><span class="meta">Administration</span><strong>Organization settings</strong>Org notification defaults and policy thresholds.</a>
+          <a href="../troubleshooting/"><span class="meta">Support</span><strong>Troubleshooting</strong>Resolve missing alerts, billing-gated workflows, role issues.</a>
+          <a href="../review-workflow/"><span class="meta">Reviewer</span><strong>Review workflow</strong>What reviewers need to be alerted about.</a>
+          <a href="../glossary/"><span class="meta">Reference</span><strong>Glossary</strong>Role, billing gate, quiet hours, MFA.</a>
+        </div>
+      </section>
+
+      <nav class="prev-next" aria-label="Article navigation">
+        <a class="prev" href="../review-workflow/">
+          <span class="label">Previous</span>
+          <span class="title">Review workflow</span>
+        </a>
+        <a class="next" href="../troubleshooting/">
+          <span class="label">Next</span>
+          <span class="title">Troubleshooting</span>
+        </a>
+      </nav>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <span class="footer-brand-mark" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          </span>
+          <span>Knightsbridge Risk</span>
+        </div>
+        <p>Protective security, tactical risk solutions, and the Castlewatch incident-coordination platform &mdash; engineered for trust-based teams.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../../#capabilities">Executive Protection</a></li>
+          <li><a href="../../#capabilities">Training Evaluation</a></li>
+          <li><a href="../../#capabilities">Red Team Testing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Castlewatch</h4>
+        <ul>
+          <li><a href="https://castlewatch.onrender.com/signup">Create workspace</a></li>
+          <li><a href="https://castlewatch.onrender.com/login">Log in</a></li>
+          <li><a href="../">Knowledge base</a></li>
+          <li><a href="../../user-guide/">User guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@knightsrisk.com">contact@knightsrisk.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Knightsbridge Risk Management. All rights reserved.</span>
+      <span>Discretion &middot; Pedigree &middot; Clarity</span>
+    </div>
+  </footer>
+</body>
+</html>

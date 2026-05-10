@@ -4,162 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Castlewatch Knowledge Base | Knightsbridge Risk Management</title>
+  <meta name="description" content="Operating library for Castlewatch incident coordination — organized by role for administrators, reporters, and reviewers, with reference material covering trusted partners, organization settings, notifications, access, and troubleshooting.">
+  <link rel="canonical" href="https://knightsrisk.com/knowledge-base/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://knightsrisk.com/knowledge-base/">
+  <meta property="og:title" content="Castlewatch Knowledge Base">
+  <meta property="og:description" content="Role-based operating library for Castlewatch — onboarding, reporting, review, trusted partners, settings, and troubleshooting.">
+  <meta property="og:image" content="https://knightsrisk.com/assets/favicon-180.png">
+  <meta property="og:site_name" content="Knightsbridge Risk Management">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Castlewatch Knowledge Base">
+  <meta name="twitter:description" content="Role-based operating library for Castlewatch — onboarding, reporting, review, trusted partners, settings, and troubleshooting.">
+  <meta name="twitter:image" content="https://knightsrisk.com/assets/favicon-180.png">
+  <meta name="theme-color" content="#07111c">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon-180.png">
   <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: #0d1a26;
-      color: #f2f2f2;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(180deg, rgba(4, 8, 12, 0.94) 0%, rgba(13, 26, 38, 0.98) 100%);
-      padding: 34px 20px 70px;
-      position: relative;
-      overflow: hidden;
-    }
-    header::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='120' viewBox='0 0 140 120'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.12)' stroke-width='1.8'%3E%3Cpath d='M35 4 L70 24 L70 64 L35 84 L0 64 L0 24 Z'/%3E%3Cpath d='M105 4 L140 24 L140 64 L105 84 L70 64 L70 24 Z'/%3E%3Cpath d='M35 64 L70 84 L70 124 L35 144 L0 124 L0 84 Z'/%3E%3Cpath d='M105 64 L140 84 L140 124 L105 144 L70 124 L70 84 Z'/%3E%3C/g%3E%3C/svg%3E");
-      opacity: 0.7;
-      pointer-events: none;
-    }
-    .nav, .hero, main, footer {
-      position: relative;
-      z-index: 2;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      align-items: center;
-      margin-bottom: 56px;
-    }
-    .nav a {
-      color: #d6e1ea;
-      text-decoration: none;
-      font-weight: 700;
-    }
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 10px;
-    }
-    .nav-links a {
-      border: 1px solid rgba(255,255,255,0.16);
-      border-radius: 999px;
-      padding: 8px 12px;
-    }
-    .nav-links .primary {
-      background: #d6e1ea;
-      border-color: #d6e1ea;
-      color: #0d1a26;
-    }
-    h1 {
-      max-width: 780px;
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      line-height: 1.1;
-      margin-bottom: 18px;
-    }
-    .lead {
-      max-width: 820px;
-      color: #d6e1ea;
-      font-size: 1.1rem;
-    }
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 46px;
-      padding: 12px 22px;
-      border-radius: 999px;
-      border: 1px solid #b0b0b0;
-      background: #b0b0b0;
-      color: #0d1a26;
-      font-weight: 800;
-      text-decoration: none;
-    }
-    .button.secondary {
-      background: transparent;
-      color: #ffffff;
-      border-color: rgba(255,255,255,0.24);
-    }
-    main {
-      padding: 50px 20px 20px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-    }
-    article, .callout {
-      background: #142433;
-      border: 1px solid #1a2d40;
-      border-radius: 12px;
-      padding: 26px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.32);
-    }
-    article h2, .callout h2 {
-      color: #ffffff;
-      font-size: 1.25rem;
-      margin-bottom: 10px;
-    }
-    article p, article li, .callout p {
-      color: #d0d0d0;
-    }
-    article ul {
-      margin-top: 12px;
-      padding-left: 20px;
-    }
-    .section-title {
-      margin: 48px 0 20px;
-      font-size: 1.75rem;
-      color: #ffffff;
-    }
-    .callout {
-      margin-top: 42px;
-      display: grid;
-      gap: 18px;
-      grid-template-columns: minmax(0, 1fr) auto;
-      align-items: center;
-    }
-    footer {
-      padding: 36px 20px 28px;
-      color: #aaaaaa;
-      text-align: center;
-    }
-    @media (max-width: 760px) {
-      .nav, .callout {
-        grid-template-columns: 1fr;
-        flex-direction: column;
-        align-items: stretch;
-        text-align: center;
-      }
-      .nav-links, .actions {
-        justify-content: center;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
     <nav class="nav" aria-label="Primary navigation">
-      <a href="../">Knightsbridge Risk</a>
+      <a class="nav-brand" href="../">Knightsbridge Risk</a>
       <div class="nav-links">
         <a href="../#castlewatch">Castlewatch</a>
         <a href="../user-guide/">User Guide</a>
@@ -168,90 +35,193 @@
       </div>
     </nav>
     <section class="hero">
-      <h1>Castlewatch Knowledge Base</h1>
-      <p class="lead">Practical operating notes for church security teams using Castlewatch to report incidents, review submissions, coordinate trusted partners, and manage organization settings.</p>
+      <p class="eyebrow">Castlewatch operating library</p>
+      <h1>Knowledge base for private incident coordination.</h1>
+      <p class="lead">Operating references for church security teams using Castlewatch to report incidents, review submissions, manage trusted partners, maintain organization settings, and keep decisions auditable. Articles are grouped by the role doing the work.</p>
       <div class="actions">
         <a class="button" href="https://castlewatch.onrender.com/signup">Create workspace</a>
         <a class="button secondary" href="https://castlewatch.onrender.com/login">Log in</a>
+        <a class="button secondary" href="glossary/">Open glossary</a>
       </div>
     </section>
   </header>
 
   <main>
-    <h2 class="section-title">Core Articles</h2>
-    <section class="grid" aria-label="Knowledge base articles">
-      <article>
-        <h2>Workspace Onboarding</h2>
-        <p>Start by creating an organization workspace, completing the profile, and setting the primary region. The region helps support regional sharing defaults and organization discovery.</p>
-        <ul>
-          <li>Create the organization account from the signup page.</li>
-          <li>Complete onboarding before inviting the rest of the team.</li>
-          <li>Activate billing when the workspace is ready for live operational use.</li>
-        </ul>
-      </article>
-
-      <article>
-        <h2>Incident Submission</h2>
-        <p>Reports should be operationally useful and privacy-aware. Capture the event time, severity, location, visibility scope, tags, summary, and narrative details.</p>
-        <ul>
-          <li>Use saved organization sites when available for cleaner map placement.</li>
-          <li>Prefer directly observed facts over assumptions.</li>
-          <li>Use selected-partner visibility only when a trusted partner audience is intended.</li>
-        </ul>
-      </article>
-
-      <article>
-        <h2>Review Queue</h2>
-        <p>Reviewers move reports through explicit moderation states. Use claim, request changes, verify, reject, and return-to-review actions deliberately.</p>
-        <ul>
-          <li>Add reviewer notes when context affects the decision.</li>
-          <li>Use request changes when the report needs reporter clarification.</li>
-          <li>Verify only when the report is ready for its selected audience.</li>
-        </ul>
-      </article>
-
-      <article>
-        <h2>Trusted Partners</h2>
-        <p>Trusted organization relationships should be explicit. Castlewatch tracks requests, connection state, and template MOU/NDA status for partner coordination.</p>
-        <ul>
-          <li>Send partner requests only to organizations your team intends to coordinate with.</li>
-          <li>Track signing metadata for the template MOU and NDA before relying on a relationship operationally.</li>
-          <li>Review partner visibility defaults after new connections are established.</li>
-        </ul>
-      </article>
-
-      <article>
-        <h2>Organization Settings</h2>
-        <p>Organization administrators can manage member roles, notification defaults, mapped sites, policy thresholds, sharing defaults, and profile details.</p>
-        <ul>
-          <li>Keep membership roles least-privilege.</li>
-          <li>Maintain mapped sites for accurate dashboard placement.</li>
-          <li>Set notification defaults before broadening reporting access.</li>
-        </ul>
-      </article>
-
-      <article>
-        <h2>Common Troubleshooting</h2>
-        <p>If a workflow appears blocked, check account status, organization status, billing state, and role permissions first.</p>
-        <ul>
-          <li>Onboarding loops usually mean the organization profile has not been activated.</li>
-          <li>Reporting and review pages require an active subscription state.</li>
-          <li>Admin-only settings depend on the policy thresholds configured by the organization.</li>
-        </ul>
-      </article>
+    <!-- Quick start paths -->
+    <section class="quickstart" aria-label="Recommended quick-start paths">
+      <h2>Where to start</h2>
+      <p>Pick the path that matches what you are doing this week. Each path links to the articles in the order most teams need them.</p>
+      <div class="quickstart-paths">
+        <a class="quickstart-path" href="onboarding/">
+          <strong><span class="step">1</span>Setting up a workspace</strong>
+          Onboarding &rarr; Organization settings &rarr; Trusted partners.
+        </a>
+        <a class="quickstart-path" href="incident-reporting/">
+          <strong><span class="step">2</span>Submitting your first report</strong>
+          Incident reporting &rarr; Incident records &rarr; Notifications.
+        </a>
+        <a class="quickstart-path" href="review-workflow/">
+          <strong><span class="step">3</span>Running the review queue</strong>
+          Review workflow &rarr; Incident records &rarr; Trusted partners.
+        </a>
+        <a class="quickstart-path" href="troubleshooting/">
+          <strong><span class="step">4</span>Something isn't working</strong>
+          Troubleshooting &rarr; Notifications &amp; access &rarr; Glossary.
+        </a>
+      </div>
     </section>
 
+    <!-- How to use -->
+    <section class="panel">
+      <h2>How this knowledge base is organized</h2>
+      <p>Castlewatch is built around explicit operational state: reports are submitted, reviewers make recorded decisions, trusted partners are connected through deliberate workflows, and organization settings define who can do what. The articles below mirror those workflows. Each article opens with an <em>at-a-glance</em> summary (who it is for, what to read first, what comes next), followed by structured reference material, common scenarios, frequently asked questions, and links to related work.</p>
+      <ul>
+        <li><strong>Administrators</strong> should begin with onboarding, organization settings, access, and trusted partners.</li>
+        <li><strong>Reporters</strong> should focus on incident reporting and the incident record page.</li>
+        <li><strong>Reviewers</strong> should focus on the review workflow, incident records, and notifications.</li>
+        <li><strong>All roles</strong> benefit from the glossary, the notifications &amp; access reference, and the troubleshooting checklist.</li>
+      </ul>
+    </section>
+
+    <!-- Administrators hub -->
+    <section class="role-hub" id="administrators" aria-labelledby="hub-admin">
+      <div class="role-hub-header">
+        <h2 id="hub-admin"><span class="role-tag admin">For Administrators</span> Configuration &amp; trust</h2>
+        <p>Stand up the workspace, define who can do what, and decide how reports are shared by default.</p>
+      </div>
+      <div class="article-grid">
+        <a class="article-card" href="onboarding/">
+          <span class="meta">Workspace setup</span>
+          <h2>Onboarding &amp; workspace activation</h2>
+          <p>Create the workspace, complete the organization profile, choose a region, and understand what must be active before live operations begin.</p>
+        </a>
+        <a class="article-card" href="organization-settings/">
+          <span class="meta">Administration</span>
+          <h2>Organization settings</h2>
+          <p>Manage members, roles, mapped sites, notification defaults, policy thresholds, sharing defaults, and organization profile details.</p>
+        </a>
+        <a class="article-card" href="trusted-partners/">
+          <span class="meta">Trust network</span>
+          <h2>Trusted partners &amp; trust groups</h2>
+          <p>Request relationships, sign template MOU/NDA records, accept or decline partners, send secure messages, and group connected organizations.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Reporters hub -->
+    <section class="role-hub" id="reporters" aria-labelledby="hub-reporter">
+      <div class="role-hub-header">
+        <h2 id="hub-reporter"><span class="role-tag reporter">For Reporters</span> Capturing what happened</h2>
+        <p>Submit complete, scoped, searchable reports that reviewers can act on without rebuilding context.</p>
+      </div>
+      <div class="article-grid">
+        <a class="article-card" href="incident-reporting/">
+          <span class="meta">Reporter workflow</span>
+          <h2>Incident reporting</h2>
+          <p>Use structured fields, saved sites, severity, visibility, tags, summary, and narrative details to submit reports that reviewers can act on.</p>
+        </a>
+        <a class="article-card" href="incident-records/">
+          <span class="meta">Incident workspace</span>
+          <h2>Incident records, comments, sightings &amp; attachments</h2>
+          <p>Understand the incident detail page, issue-style comments, timeline sightings, supporting files, and how records evolve after submission.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Reviewers hub -->
+    <section class="role-hub" id="reviewers" aria-labelledby="hub-reviewer">
+      <div class="role-hub-header">
+        <h2 id="hub-reviewer"><span class="role-tag reviewer">For Reviewers</span> Moderation &amp; verification</h2>
+        <p>Claim reports, verify facts, narrow visibility, and preserve the decision context for the next reviewer.</p>
+      </div>
+      <div class="article-grid">
+        <a class="article-card" href="review-workflow/">
+          <span class="meta">Reviewer workflow</span>
+          <h2>Review queue &amp; moderation</h2>
+          <p>Claim reports, verify facts, request changes, reject submissions, return records to review, and preserve decision context.</p>
+        </a>
+        <a class="article-card" href="incident-records/">
+          <span class="meta">Incident workspace</span>
+          <h2>Incident records, comments, sightings &amp; attachments</h2>
+          <p>How the incident detail page combines narrative, comments, sightings, attachments, and structured metadata after review.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Reference hub -->
+    <section class="role-hub" id="reference" aria-labelledby="hub-reference">
+      <div class="role-hub-header">
+        <h2 id="hub-reference"><span class="role-tag reference">For Everyone</span> Reference &amp; troubleshooting</h2>
+        <p>Cross-cutting material used by every role: alert routing, access posture, common problems, and shared vocabulary.</p>
+      </div>
+      <div class="article-grid">
+        <a class="article-card" href="notifications-access/">
+          <span class="meta">Access &amp; alerts</span>
+          <h2>Notifications, roles, billing &amp; access</h2>
+          <p>Understand personal alert preferences, organization notification defaults, role thresholds, subscription gates, and account security settings.</p>
+        </a>
+        <a class="article-card" href="troubleshooting/">
+          <span class="meta">Support reference</span>
+          <h2>Troubleshooting common issues</h2>
+          <p>Resolve onboarding loops, missing buttons, blocked reports, map placement problems, partner workflow blockers, and notification issues.</p>
+        </a>
+        <a class="article-card" href="glossary/">
+          <span class="meta">Vocabulary</span>
+          <h2>Glossary</h2>
+          <p>Shared definitions for severity, visibility, moderation states, connection states, trust groups, policy thresholds, and other operating terms.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- User guide callout -->
     <section class="callout">
       <div>
-        <h2>Need an operating walkthrough?</h2>
-        <p>The user guide turns these articles into a step-by-step path for administrators, reporters, and reviewers.</p>
+        <h2>Prefer a guided walkthrough?</h2>
+        <p>The user guide covers the same workflows in the order a new team usually configures and operates Castlewatch — from signup through the first verified report.</p>
       </div>
       <a class="button" href="../user-guide/">Open user guide</a>
     </section>
   </main>
 
   <footer>
-    &copy; 2026 Knightsbridge Risk Management. All rights reserved.
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <span class="footer-brand-mark" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          </span>
+          <span>Knightsbridge Risk</span>
+        </div>
+        <p>Protective security, tactical risk solutions, and the Castlewatch incident-coordination platform &mdash; engineered for trust-based teams.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../#capabilities">Executive Protection</a></li>
+          <li><a href="../#capabilities">Training Evaluation</a></li>
+          <li><a href="../#capabilities">Red Team Testing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Castlewatch</h4>
+        <ul>
+          <li><a href="https://castlewatch.onrender.com/signup">Create workspace</a></li>
+          <li><a href="https://castlewatch.onrender.com/login">Log in</a></li>
+          <li><a href="./">Knowledge base</a></li>
+          <li><a href="../user-guide/">User guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@knightsrisk.com">contact@knightsrisk.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Knightsbridge Risk Management. All rights reserved.</span>
+      <span>Discretion &middot; Pedigree &middot; Clarity</span>
+    </div>
   </footer>
 </body>
 </html>

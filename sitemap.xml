@@ -2,20 +2,74 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://knightsrisk.com/</loc>
-    <lastmod>2026-05-10T16:45:00Z</lastmod>
+    <lastmod>2026-05-23T19:30:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://knightsrisk.com/knowledge-base/</loc>
-    <lastmod>2026-05-10T16:45:00Z</lastmod>
+    <lastmod>2026-05-23T19:30:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://knightsrisk.com/user-guide/</loc>
-    <lastmod>2026-05-10T16:45:00Z</lastmod>
+    <lastmod>2026-05-23T19:30:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://knightsrisk.com/knowledge-base/onboarding/</loc>
+    <lastmod>2026-05-23T19:30:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://knightsrisk.com/knowledge-base/incident-reporting/</loc>
+    <lastmod>2026-05-23T19:30:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://knightsrisk.com/knowledge-base/review-workflow/</loc>
+    <lastmod>2026-05-23T19:30:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://knightsrisk.com/knowledge-base/incident-records/</loc>
+    <lastmod>2026-05-23T19:30:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://knightsrisk.com/knowledge-base/trusted-partners/</loc>
+    <lastmod>2026-05-23T19:30:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://knightsrisk.com/knowledge-base/organization-settings/</loc>
+    <lastmod>2026-05-23T19:30:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://knightsrisk.com/knowledge-base/notifications-access/</loc>
+    <lastmod>2026-05-23T19:30:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://knightsrisk.com/knowledge-base/troubleshooting/</loc>
+    <lastmod>2026-05-23T19:30:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://knightsrisk.com/knowledge-base/glossary/</loc>
+    <lastmod>2026-05-23T19:30:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

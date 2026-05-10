@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Troubleshooting | Castlewatch Knowledge Base</title>
+  <meta name="description" content="Troubleshoot Castlewatch onboarding loops, missing actions, blocked reports, map placement, partner workflows, notifications, and access issues.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon-180.png">
+  <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="nav-brand" href="../../">Knightsbridge Risk</a>
+      <div class="nav-links">
+        <a href="../">Knowledge Base</a>
+        <a href="../../user-guide/">User Guide</a>
+        <a href="https://castlewatch.onrender.com/login">Log in</a>
+        <a class="primary" href="https://castlewatch.onrender.com/signup">Sign up</a>
+      </div>
+    </nav>
+    <section class="hero">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../">Knowledge Base</a>
+        <span class="sep">/</span>
+        <a href="../#reference">Reference</a>
+        <span class="sep">/</span>
+        <span class="current">Troubleshooting</span>
+      </nav>
+      <span class="role-tag reference">All roles</span>
+      <h1 style="margin-top:14px">Troubleshooting common workflow issues</h1>
+      <p class="lead">Most Castlewatch workflow problems come from incomplete onboarding, inactive billing, role permissions, missing organization settings, or partner relationships that are not fully connected. Work through this checklist before escalating.</p>
+    </section>
+  </header>
+
+  <main class="article-layout">
+    <aside class="toc">
+      <h2>On this page</h2>
+      <ol>
+        <li><a href="#flow">Diagnostic flow</a></li>
+        <li><a href="#onboarding">Onboarding loops</a></li>
+        <li><a href="#actions">Missing buttons</a></li>
+        <li><a href="#reports">Blocked reports</a></li>
+        <li><a href="#map">Map placement</a></li>
+        <li><a href="#partners">Partner blockers</a></li>
+        <li><a href="#notifications">Notifications</a></li>
+        <li><a href="#mfa">MFA &amp; sign-in</a></li>
+        <li><a href="#performance">Performance &amp; stale data</a></li>
+        <li><a href="#escalate">When to escalate</a></li>
+        <li><a href="#related">Related articles</a></li>
+      </ol>
+    </aside>
+
+    <article class="article-body">
+      <dl class="summary-box">
+        <div><dt>Audience</dt><dd>Anyone hitting an unexpected behavior.</dd></div>
+        <div><dt>How to use</dt><dd>Start with the <a href="#flow" style="color:var(--accent)">diagnostic flow</a>, then jump to the specific section.</dd></div>
+        <div><dt>Companion</dt><dd><a href="../glossary/" style="color:var(--accent)">Glossary</a> for unfamiliar terms.</dd></div>
+        <div><dt>When stuck</dt><dd>See <a href="#escalate" style="color:var(--accent)">When to escalate</a>.</dd></div>
+      </dl>
+
+      <section id="flow" class="panel">
+        <h2>Diagnostic flow</h2>
+        <p>Before diving into a specific issue, check these in order. Most problems resolve at one of the first three steps.</p>
+        <ol>
+          <li><strong>Is the organization profile complete?</strong> An incomplete profile blocks most workflows. Re-open onboarding and verify.</li>
+          <li><strong>Is billing active?</strong> Reporting and review actions are gated on an active subscription.</li>
+          <li><strong>Is the user's role correct?</strong> Missing actions almost always indicate a role or policy threshold issue.</li>
+          <li><strong>Is the workspace state fresh?</strong> Refresh the page; sign out and back in if the issue persists.</li>
+          <li><strong>Is the action toast giving a specific reason?</strong> The platform reports failure reasons in on-page toasts &mdash; read them before retrying.</li>
+        </ol>
+      </section>
+
+      <section id="onboarding" class="panel">
+        <h2>Onboarding loops</h2>
+        <p>If the app returns to onboarding after you save the region or organization profile:</p>
+        <ul>
+          <li>Confirm the profile fields are complete and that the save action reported success on-page.</li>
+          <li>Reload the page after a successful save.</li>
+          <li>If the loop persists, sign out and back in to clear stale session state.</li>
+          <li>If still looping, confirm with a second org admin that the profile was saved on the server side; sometimes the local form succeeded but the server rejected the data.</li>
+        </ul>
+        <p>See <a href="../onboarding/">Onboarding</a> for the full activation checklist.</p>
+      </section>
+
+      <section id="actions" class="panel">
+        <h2>Missing buttons or sections</h2>
+        <p>Missing buttons usually indicate role or policy restrictions. Check in this order:</p>
+        <ol>
+          <li><strong>Member role:</strong> Confirm you have the role the action requires (see <a href="../organization-settings/#members">Role reference</a>).</li>
+          <li><strong>Policy threshold:</strong> Some actions require a higher minimum role per organization configuration.</li>
+          <li><strong>Billing state:</strong> Live operational actions are billing-gated.</li>
+          <li><strong>Subscription status:</strong> Even with billing configured, a paused or past-due state may suspend some actions.</li>
+        </ol>
+        <p>For review actions specifically, the user needs review access. For partner actions, the user must meet the trusted-partner policy threshold.</p>
+      </section>
+
+      <section id="reports" class="panel">
+        <h2>Blocked reports or incident access</h2>
+        <p>Reporting and incident access can be unavailable if the organization subscription is not active. Check billing first, then confirm the user's role. If the submit button shows an error, read the toast message and fix the missing or invalid field before retrying.</p>
+        <h3>Common causes</h3>
+        <table class="field-table">
+          <thead><tr><th>Symptom</th><th>Likely cause</th><th>Fix</th></tr></thead>
+          <tbody>
+            <tr><td>Submit button is disabled</td><td>Required field is missing or invalid.</td><td>Look for red field highlights; complete the form.</td></tr>
+            <tr><td>Submit succeeds but report never appears in queue</td><td>Visibility set to a partner who is not connected.</td><td>Edit the report, change visibility to origin-only and resubmit.</td></tr>
+            <tr><td>"Subscription required" toast</td><td>Billing inactive.</td><td>Reactivate billing from organization settings.</td></tr>
+            <tr><td>Report exists but you cannot see it</td><td>Visibility scope excludes you.</td><td>Ask a reviewer with broader access to confirm and adjust visibility.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="map" class="panel">
+        <h2>Map placement issues</h2>
+        <p>The incident map uses saved organization site coordinates. If incidents do not appear where expected:</p>
+        <ul>
+          <li>Confirm the report used a mapped site.</li>
+          <li>Confirm the site's latitude and longitude are correct &mdash; preview from <a href="../organization-settings/#sites">Organization settings &rarr; Mapped sites</a>.</li>
+          <li>Reports without saved site coordinates may still exist but cannot be plotted accurately.</li>
+          <li>If multiple incidents stack on the wrong location, the underlying site coordinates are probably wrong &mdash; fix the site, not the individual incidents.</li>
+        </ul>
+      </section>
+
+      <section id="partners" class="panel">
+        <h2>Partner workflow blockers</h2>
+        <p>If a relationship cannot be accepted, check:</p>
+        <ul>
+          <li><strong>Connection state:</strong> A "requested" relationship is not the same as "connected".</li>
+          <li><strong>Signer metadata:</strong> Some organizations require template MOU/NDA signatures before accepting.</li>
+          <li><strong>MOU/NDA status:</strong> Outstanding signatures may block partner-scoped sharing.</li>
+          <li><strong>Receiving organization:</strong> Only the receiving organization can accept &mdash; the requester cannot.</li>
+          <li><strong>Policy threshold:</strong> The user attempting to accept may not meet the minimum role.</li>
+        </ul>
+        <p>See <a href="../trusted-partners/#states">Connection states</a> for the full lifecycle.</p>
+      </section>
+
+      <section id="notifications" class="panel">
+        <h2>Notification issues</h2>
+        <ul class="checklist">
+          <li>Confirm the event is enabled in personal alert preferences.</li>
+          <li>Check the minimum severity threshold &mdash; low-severity events are often filtered out.</li>
+          <li>Verify quiet hours do not suppress the expected notification.</li>
+          <li>For SMS, confirm a destination number exists and is current.</li>
+          <li>Confirm organization notification defaults are configured for the event.</li>
+          <li>Check the user's email provider's spam folder if email alerts are missing.</li>
+          <li>Confirm the user has not opted out at the org level.</li>
+        </ul>
+        <p>If notifications were working and suddenly stopped, a recent change to org defaults is the most common cause. Check the audit log or ask the administrator who last edited the settings.</p>
+      </section>
+
+      <section id="mfa" class="panel">
+        <h2>MFA &amp; sign-in</h2>
+        <ul>
+          <li><strong>Lost MFA device:</strong> Use the recovery code saved at enrollment. If unavailable, an org admin can disable MFA so you can sign in and re-enroll.</li>
+          <li><strong>Code rejected:</strong> Verify the authenticator app's time is in sync. Try the code a few seconds before its rotation window.</li>
+          <li><strong>Signed out unexpectedly:</strong> A password change revokes all sessions. Sign in again.</li>
+          <li><strong>Stuck on a session expired loop:</strong> Clear cookies for the workspace domain and sign in.</li>
+        </ul>
+      </section>
+
+      <section id="performance" class="panel">
+        <h2>Performance &amp; stale data</h2>
+        <ul>
+          <li>If a recent change does not appear, refresh the page &mdash; some views cache aggressively to reduce load.</li>
+          <li>If pages load slowly, check the browser console for errors. Adblockers and corporate proxies occasionally interfere.</li>
+          <li>For widespread slowness, check the platform status page or ask your administrator.</li>
+        </ul>
+      </section>
+
+      <section id="escalate" class="panel">
+        <h2>When to escalate</h2>
+        <p>If you've worked through the relevant section and the issue persists:</p>
+        <ol>
+          <li>Document what you tried, including any toast messages and the exact steps to reproduce.</li>
+          <li>Note the affected user(s), organization, and approximate time.</li>
+          <li>Take a screenshot if a visible error is present.</li>
+          <li>Contact your organization administrator &mdash; many issues are configuration matters that they can resolve directly.</li>
+          <li>If the administrator confirms it is a platform issue, escalate to Castlewatch support with the documented details.</li>
+        </ol>
+      </section>
+
+      <section id="related" class="panel">
+        <h2>Related articles</h2>
+        <div class="related-articles">
+          <a href="../onboarding/"><span class="meta">Setup</span><strong>Onboarding</strong>Workspace activation troubleshooting.</a>
+          <a href="../organization-settings/"><span class="meta">Admin</span><strong>Organization settings</strong>Roles, policy thresholds, and sharing defaults.</a>
+          <a href="../notifications-access/"><span class="meta">Access</span><strong>Notifications &amp; access</strong>Alert routing detail.</a>
+          <a href="../glossary/"><span class="meta">Reference</span><strong>Glossary</strong>Definitions for terms used above.</a>
+        </div>
+      </section>
+
+      <nav class="prev-next" aria-label="Article navigation">
+        <a class="prev" href="../notifications-access/">
+          <span class="label">Previous</span>
+          <span class="title">Notifications &amp; access</span>
+        </a>
+        <a class="next" href="../glossary/">
+          <span class="label">Next</span>
+          <span class="title">Glossary</span>
+        </a>
+      </nav>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <span class="footer-brand-mark" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          </span>
+          <span>Knightsbridge Risk</span>
+        </div>
+        <p>Protective security, tactical risk solutions, and the Castlewatch incident-coordination platform &mdash; engineered for trust-based teams.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../../#capabilities">Executive Protection</a></li>
+          <li><a href="../../#capabilities">Training Evaluation</a></li>
+          <li><a href="../../#capabilities">Red Team Testing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Castlewatch</h4>
+        <ul>
+          <li><a href="https://castlewatch.onrender.com/signup">Create workspace</a></li>
+          <li><a href="https://castlewatch.onrender.com/login">Log in</a></li>
+          <li><a href="../">Knowledge base</a></li>
+          <li><a href="../../user-guide/">User guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@knightsrisk.com">contact@knightsrisk.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Knightsbridge Risk Management. All rights reserved.</span>
+      <span>Discretion &middot; Pedigree &middot; Clarity</span>
+    </div>
+  </footer>
+</body>
+</html>

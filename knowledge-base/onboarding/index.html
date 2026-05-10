@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onboarding &amp; Workspace Activation | Castlewatch Knowledge Base</title>
+  <meta name="description" content="How to create, activate, and prepare a Castlewatch workspace for church security incident coordination — profile, region, billing, and the administrator handoff.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon-180.png">
+  <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="nav-brand" href="../../">Knightsbridge Risk</a>
+      <div class="nav-links">
+        <a href="../">Knowledge Base</a>
+        <a href="../../user-guide/">User Guide</a>
+        <a href="https://castlewatch.onrender.com/login">Log in</a>
+        <a class="primary" href="https://castlewatch.onrender.com/signup">Sign up</a>
+      </div>
+    </nav>
+    <section class="hero">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../">Knowledge Base</a>
+        <span class="sep">/</span>
+        <a href="../#administrators">For Administrators</a>
+        <span class="sep">/</span>
+        <span class="current">Onboarding</span>
+      </nav>
+      <span class="role-tag admin">For Administrators</span>
+      <h1 style="margin-top:14px">Onboarding &amp; workspace activation</h1>
+      <p class="lead">Castlewatch onboarding creates the organization context that every incident, member, trusted partner, notification default, and billing state depends on. Done well, it takes 15 minutes and removes most of the friction that appears later.</p>
+    </section>
+  </header>
+
+  <main class="article-layout">
+    <aside class="toc">
+      <h2>On this page</h2>
+      <ol>
+        <li><a href="#purpose">Purpose</a></li>
+        <li><a href="#before">Before you start</a></li>
+        <li><a href="#fields">Profile fields</a></li>
+        <li><a href="#steps">Activation steps</a></li>
+        <li><a href="#handoff">Administrator handoff</a></li>
+        <li><a href="#scenarios">Scenarios</a></li>
+        <li><a href="#mistakes">Common mistakes</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#related">Related articles</a></li>
+      </ol>
+    </aside>
+
+    <article class="article-body">
+      <dl class="summary-box">
+        <div><dt>Audience</dt><dd>The first administrator standing up a new workspace.</dd></div>
+        <div><dt>Time required</dt><dd>~15 minutes for profile, ~1 hour including handoff prep.</dd></div>
+        <div><dt>Prerequisites</dt><dd>Approval to act on behalf of the organization, official organization name, region label.</dd></div>
+        <div><dt>Outcome</dt><dd>An activated workspace ready for member invitations, mapped sites, and policy decisions.</dd></div>
+      </dl>
+
+      <section id="purpose" class="panel">
+        <h2>Purpose</h2>
+        <p>Onboarding turns a new Castlewatch account into an <strong>organization workspace</strong>. The workspace is the boundary for members, roles, incident ownership, trusted partner relationships, default sharing policy, mapped sites, and alert routing. A user can have a valid login while the organization is still incomplete, so onboarding should be treated as the first operational configuration step, not a marketing form.</p>
+        <p>For most teams, one trusted administrator should complete onboarding before inviting other users. That keeps the initial organization name, region, and billing path controlled by the person responsible for operating the workspace.</p>
+        <p>If you are joining an existing workspace, you do not run onboarding &mdash; an organization administrator invites you and assigns a role. Onboarding is only for the very first user creating the workspace.</p>
+      </section>
+
+      <section id="before" class="panel">
+        <h2>Before you start</h2>
+        <p>Spend a few minutes gathering these decisions before opening the signup page. Each one is harder to change cleanly after partners and members have already used the workspace.</p>
+        <ul class="checklist">
+          <li>Confirm the <strong>official organization name</strong> that should appear in incident records and trusted partner requests &mdash; the name partners will recognize, not a nickname.</li>
+          <li>Choose a <strong>region label</strong> other churches or partner organizations will recognize, such as a metro area, county, or regional network name.</li>
+          <li>Decide <strong>who will be the first organization administrator</strong> and who will be invited later as reviewers, reporters, or viewers.</li>
+          <li>Know whether the workspace is only being <strong>evaluated</strong> or should be <strong>activated for live reporting immediately</strong> &mdash; this affects when billing is enabled.</li>
+          <li>Identify two or three <strong>operationally relevant locations</strong> (main campus, satellite, common event site) that will become the first mapped sites.</li>
+        </ul>
+      </section>
+
+      <section id="fields" class="panel">
+        <h2>Profile fields</h2>
+        <p>The onboarding form is short but each field has downstream consequences. Use this reference to decide what to enter.</p>
+        <table class="field-table">
+          <thead><tr><th>Field</th><th>What it controls</th><th>How to choose</th></tr></thead>
+          <tbody>
+            <tr><td>Organization name</td><td>Display name on incidents, partner requests, and member rosters.</td><td>Use the legal or commonly-published name. Avoid internal nicknames.</td></tr>
+            <tr><td>Region label</td><td>How partners and the discovery experience recognize you geographically.</td><td>Choose a metro area, county, or regional network. Be consistent with how peer organizations label themselves.</td></tr>
+            <tr><td>Administrator email</td><td>First login, password reset path, billing notifications.</td><td>Use an address that survives staffing changes &mdash; ideally a role-based mailbox.</td></tr>
+            <tr><td>Time zone</td><td>Display of incident <em>occurred-at</em> times and quiet-hours interpretation.</td><td>Use the organization's primary operating time zone, not the administrator's travel time zone.</td></tr>
+          </tbody>
+        </table>
+        <p class="note">If you are unsure about the region label, look at how nearby ministry networks or partner organizations describe themselves. Matching their label makes connection requests easier to recognize.</p>
+      </section>
+
+      <section id="steps" class="panel">
+        <h2>Activation steps</h2>
+        <ol>
+          <li><strong>Create the first account</strong> from the Castlewatch signup page using the administrator email.</li>
+          <li><strong>Complete the organization profile</strong> with the official name, region label, and time zone.</li>
+          <li><strong>Confirm the profile saves successfully</strong> and that you are routed into the workspace dashboard. If you return to the onboarding page, see <a href="../troubleshooting/#onboarding">Troubleshooting &rarr; Onboarding loops</a>.</li>
+          <li><strong>Review billing</strong> when the team is ready to use live operational workflows. Evaluation can continue without billing, but reporting and review actions are gated on an active subscription.</li>
+          <li><strong>Open organization settings</strong> and configure members, sites, notifications, policy thresholds, and sharing defaults before broad rollout.</li>
+          <li><strong>Invite the rest of the team</strong> only after policy thresholds and sharing defaults are set &mdash; otherwise new members may try workflows that are not yet ready.</li>
+        </ol>
+        <p class="note">If onboarding repeatedly returns you to the onboarding page, verify that the organization region and profile fields were saved. An incomplete organization profile can block the rest of the workspace.</p>
+      </section>
+
+      <section id="handoff" class="panel">
+        <h2>Administrator handoff</h2>
+        <p>After onboarding, the administrator should document the operating expectations for the team. At minimum, define <strong>who may do what</strong> and write it down where the team can find it. This prevents early confusion when the first real incident is submitted.</p>
+        <h3>Handoff checklist</h3>
+        <ul class="checklist">
+          <li>Add mapped sites before relying on the dashboard map.</li>
+          <li>Set organization notification defaults before inviting high-volume reporters.</li>
+          <li>Confirm trusted partner policy thresholds before partner requests begin.</li>
+          <li>Use the account page to configure personal alert preferences and account security (MFA where possible).</li>
+          <li>Document who may submit reports, who may review and verify, who may invite members, and who may request trusted partners.</li>
+          <li>Identify a backup administrator so the workspace is not single-person-dependent.</li>
+        </ul>
+      </section>
+
+      <section id="scenarios" class="panel">
+        <h2>Common scenarios</h2>
+        <div class="scenarios">
+          <div class="scenario">
+            <h4>You created the account but were sent back to onboarding</h4>
+            <p>The organization profile probably did not save. Re-enter the region and organization name, watch for the success indicator, then refresh. If the loop persists, sign out and back in to clear stale session state.</p>
+          </div>
+          <div class="scenario">
+            <h4>You want to evaluate before paying</h4>
+            <p>Complete the profile, skip billing, and use the workspace for evaluation. Reporting and live review actions will be gated until billing is active, but you can configure settings, add mapped sites, and prepare member invitations.</p>
+          </div>
+          <div class="scenario">
+            <h4>You used a personal nickname as the organization name</h4>
+            <p>Update the organization name immediately from <a href="../organization-settings/#profile">organization settings &rarr; profile</a>. Partner requests previously sent under the old name are easier to clean up before the relationship is established.</p>
+          </div>
+          <div class="scenario">
+            <h4>The first administrator is leaving the organization</h4>
+            <p>Promote a second member to the org admin role <em>before</em> the original administrator's account is disabled. Then change billing contact and the organization profile administrator email.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="mistakes" class="panel">
+        <h2>Common mistakes</h2>
+        <ul>
+          <li>Using a personal nickname instead of the organization name, which makes partner requests harder to recognize.</li>
+          <li>Inviting the whole team before roles and policy thresholds are configured.</li>
+          <li>Skipping mapped sites, then expecting incidents to appear accurately on the dashboard map.</li>
+          <li>Assuming billing, notifications, and trusted partner workflows are ready before checking organization settings.</li>
+          <li>Setting up the workspace under a single personal email with no backup administrator.</li>
+          <li>Using a time zone for the administrator's location rather than the organization's operating location.</li>
+        </ul>
+      </section>
+
+      <section id="faq" class="panel">
+        <h2>Frequently asked questions</h2>
+        <div class="faq">
+          <details>
+            <summary>Can a user belong to more than one workspace?</summary>
+            <p>A Castlewatch user account is associated with exactly one organization workspace at a time. If a person needs access to multiple organizations, the receiving organization invites them with a separate account.</p>
+          </details>
+          <details>
+            <summary>Can the organization name be changed later?</summary>
+            <p>Yes &mdash; from <a href="../organization-settings/#profile">organization settings &rarr; profile</a>. Existing incident records keep their internal identifiers; only the display name updates. Notify connected partners if the change is significant.</p>
+          </details>
+          <details>
+            <summary>What happens if onboarding is left half-complete?</summary>
+            <p>The account exists but cannot use most operational features. The user is routed back to onboarding on each login until the organization profile is saved. No incident, member, or partner workflows are available yet.</p>
+          </details>
+          <details>
+            <summary>Do I have to enable billing during onboarding?</summary>
+            <p>No. You can complete the profile and configure settings in evaluation mode. Live reporting and review actions remain gated until a subscription is active.</p>
+          </details>
+          <details>
+            <summary>Should the first administrator also be a reviewer?</summary>
+            <p>Often yes for very small teams, but separate the roles as soon as a second trusted person is available. Reviewing your own reports is allowed but weakens the audit trail.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="related" class="panel">
+        <h2>Related articles</h2>
+        <div class="related-articles">
+          <a href="../organization-settings/"><span class="meta">Next step</span><strong>Organization settings</strong>Configure members, sites, policy thresholds, and sharing defaults.</a>
+          <a href="../trusted-partners/"><span class="meta">Trust network</span><strong>Trusted partners</strong>Request and accept partner relationships once the profile is stable.</a>
+          <a href="../notifications-access/"><span class="meta">Access</span><strong>Notifications &amp; access</strong>Roles, billing gates, MFA, and alert routing.</a>
+          <a href="../glossary/"><span class="meta">Reference</span><strong>Glossary</strong>Workspace, region, mapped site, and other shared terms.</a>
+        </div>
+      </section>
+
+      <nav class="prev-next" aria-label="Article navigation">
+        <span class="placeholder"></span>
+        <a class="next" href="../organization-settings/">
+          <span class="label">Next article</span>
+          <span class="title">Organization settings</span>
+        </a>
+      </nav>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <span class="footer-brand-mark" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          </span>
+          <span>Knightsbridge Risk</span>
+        </div>
+        <p>Protective security, tactical risk solutions, and the Castlewatch incident-coordination platform &mdash; engineered for trust-based teams.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../../#capabilities">Executive Protection</a></li>
+          <li><a href="../../#capabilities">Training Evaluation</a></li>
+          <li><a href="../../#capabilities">Red Team Testing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Castlewatch</h4>
+        <ul>
+          <li><a href="https://castlewatch.onrender.com/signup">Create workspace</a></li>
+          <li><a href="https://castlewatch.onrender.com/login">Log in</a></li>
+          <li><a href="../">Knowledge base</a></li>
+          <li><a href="../../user-guide/">User guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@knightsrisk.com">contact@knightsrisk.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Knightsbridge Risk Management. All rights reserved.</span>
+      <span>Discretion &middot; Pedigree &middot; Clarity</span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -25,8 +25,18 @@ Top Resources
        Link: mailto:contact@knightsrisk.com
 
 2) Knowledge Base - https://knightsrisk.com/knowledge-base/
-   - Overview: Short operational articles for Castlewatch onboarding, incident submission, review queue, trusted partners, organization settings, and troubleshooting.
+   - Overview: Detailed Castlewatch operating library for onboarding, incident submission, review queue, incident records, trusted partners, organization settings, notifications, access, and troubleshooting.
    - Intended audience: Church security administrators, reviewers, reporters, and organization leaders evaluating Castlewatch workflows.
+   - Detailed pages:
+     - Onboarding and Workspace Activation: https://knightsrisk.com/knowledge-base/onboarding/
+     - Incident Reporting: https://knightsrisk.com/knowledge-base/incident-reporting/
+     - Review Queue and Moderation: https://knightsrisk.com/knowledge-base/review-workflow/
+     - Incident Records, Comments, Sightings, and Attachments: https://knightsrisk.com/knowledge-base/incident-records/
+     - Trusted Partners and Trust Groups: https://knightsrisk.com/knowledge-base/trusted-partners/
+     - Organization Settings: https://knightsrisk.com/knowledge-base/organization-settings/
+     - Notifications, Roles, Billing, and Access: https://knightsrisk.com/knowledge-base/notifications-access/
+     - Troubleshooting Common Workflow Issues: https://knightsrisk.com/knowledge-base/troubleshooting/
+     - Glossary of Castlewatch Terms: https://knightsrisk.com/knowledge-base/glossary/
 
 3) User Guide - https://knightsrisk.com/user-guide/
    - Overview: Step-by-step Castlewatch operating guide covering workspace creation, onboarding, settings, incident submission, review workflow, trusted partners, and operating records.
@@ -39,7 +49,7 @@ Machine-Readable Pointers
 Content Summary
 - Knightsbridge Risk Management provides protective security, executive protection, tactical training evaluation, and red-team testing.
 - Castlewatch is the linked private incident coordination app for church security teams.
-- Castlewatch supports organization onboarding, incident submission, moderation/review, comments, sightings, attachments, trusted partner workflows, billing status, and organization settings.
+- Castlewatch supports organization onboarding, incident submission, moderation/review, comments, sightings, attachments, trusted partner workflows, trust groups, billing status, notification settings, account access controls, and organization settings.
 - Login and signup links point to the Castlewatch hosted app.
 - Contact: contact@knightsrisk.com for consultations.
 
@@ -52,7 +62,8 @@ Attribution & Use
 - Public content may be quoted with attribution to "Knightsbridge Risk Management" and a link to https://knightsrisk.com/.
 
 Changelog
-- 2026-05-10: Added Castlewatch app links, knowledge base, user guide, and updated site summary.
+- 2026-05-23: Reorganized the knowledge base around role-based hubs (Administrators, Reporters, Reviewers, Reference), added a Glossary page, expanded every article with field-reference tables, scenarios, and FAQs, and unified the homepage / knowledge base / user guide under a single design system.
+- 2026-05-10: Expanded the Castlewatch knowledge base into detailed functionality pages and made it a core homepage offering.
 - 2025-09-22: Initial curated index created.
 
-Last updated: 2026-05-10
+Last updated: 2026-05-23
