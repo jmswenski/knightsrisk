@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Castlewatch User Guide | Knightsbridge Risk Management</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon-180.png">
+  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #0d1a26;
+      color: #f2f2f2;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(180deg, rgba(4, 8, 12, 0.94) 0%, rgba(13, 26, 38, 0.98) 100%);
+      padding: 34px 20px 70px;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='120' viewBox='0 0 140 120'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.12)' stroke-width='1.8'%3E%3Cpath d='M35 4 L70 24 L70 64 L35 84 L0 64 L0 24 Z'/%3E%3Cpath d='M105 4 L140 24 L140 64 L105 84 L70 64 L70 24 Z'/%3E%3Cpath d='M35 64 L70 84 L70 124 L35 144 L0 124 L0 84 Z'/%3E%3Cpath d='M105 64 L140 84 L140 124 L105 144 L70 124 L70 84 Z'/%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.7;
+      pointer-events: none;
+    }
+    .nav, .hero, main, footer {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 56px;
+    }
+    .nav a {
+      color: #d6e1ea;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    .nav-links a {
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 999px;
+      padding: 8px 12px;
+    }
+    .nav-links .primary {
+      background: #d6e1ea;
+      border-color: #d6e1ea;
+      color: #0d1a26;
+    }
+    h1 {
+      max-width: 780px;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+    .lead {
+      max-width: 820px;
+      color: #d6e1ea;
+      font-size: 1.1rem;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      border: 1px solid #b0b0b0;
+      background: #b0b0b0;
+      color: #0d1a26;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .button.secondary {
+      background: transparent;
+      color: #ffffff;
+      border-color: rgba(255,255,255,0.24);
+    }
+    main {
+      padding: 50px 20px 20px;
+    }
+    .guide {
+      display: grid;
+      gap: 22px;
+      counter-reset: guide;
+    }
+    .step {
+      display: grid;
+      grid-template-columns: 58px minmax(0, 1fr);
+      gap: 18px;
+      background: #142433;
+      border: 1px solid #1a2d40;
+      border-radius: 12px;
+      padding: 26px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.32);
+      counter-increment: guide;
+    }
+    .step::before {
+      content: counter(guide);
+      width: 48px;
+      height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: #d6e1ea;
+      color: #0d1a26;
+      font-weight: 900;
+      font-size: 1.1rem;
+    }
+    .step h2 {
+      color: #ffffff;
+      font-size: 1.35rem;
+      margin-bottom: 8px;
+    }
+    .step p, .step li {
+      color: #d0d0d0;
+    }
+    .step ul {
+      margin-top: 12px;
+      padding-left: 20px;
+    }
+    .quick-links {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      margin: 38px 0;
+    }
+    .quick-links a {
+      display: block;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid #1a2d40;
+      border-radius: 10px;
+      padding: 18px;
+      color: #d6e1ea;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    footer {
+      padding: 36px 20px 28px;
+      color: #aaaaaa;
+      text-align: center;
+    }
+    @media (max-width: 760px) {
+      .nav {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+      }
+      .nav-links, .actions {
+        justify-content: center;
+      }
+      .step {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="../">Knightsbridge Risk</a>
+      <div class="nav-links">
+        <a href="../#castlewatch">Castlewatch</a>
+        <a href="../knowledge-base/">Knowledge Base</a>
+        <a href="https://castlewatch.onrender.com/login">Log in</a>
+        <a class="primary" href="https://castlewatch.onrender.com/signup">Sign up</a>
+      </div>
+    </nav>
+    <section class="hero">
+      <h1>Castlewatch User Guide</h1>
+      <p class="lead">A starter guide for administrators, reviewers, and reporters using Castlewatch to run private incident coordination for a church security team.</p>
+      <div class="actions">
+        <a class="button" href="https://castlewatch.onrender.com/signup">Create workspace</a>
+        <a class="button secondary" href="https://castlewatch.onrender.com/login">Log in</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="quick-links" aria-label="Quick links">
+      <a href="https://castlewatch.onrender.com/signup">Create a new workspace</a>
+      <a href="https://castlewatch.onrender.com/login">Log in to Castlewatch</a>
+      <a href="../knowledge-base/">Read the knowledge base</a>
+    </section>
+
+    <section class="guide" aria-label="Castlewatch operating steps">
+      <article class="step">
+        <div>
+          <h2>Create or access your workspace</h2>
+          <p>Use the signup page to create a new organization workspace, or log in if your account already belongs to an organization.</p>
+          <ul>
+            <li>Use an email address your organization can recognize and support.</li>
+            <li>Keep the first administrator account limited to trusted operators.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="step">
+        <div>
+          <h2>Complete organization onboarding</h2>
+          <p>Confirm the organization name and primary region. Onboarding activates the workspace profile before the team begins live operations.</p>
+          <ul>
+            <li>Use a region label that your partner organizations will understand.</li>
+            <li>Review billing after onboarding when the workspace is ready for reporting and review.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="step">
+        <div>
+          <h2>Configure settings</h2>
+          <p>Organization settings control members, notification defaults, mapped sites, policy thresholds, sharing defaults, and organization profile details.</p>
+          <ul>
+            <li>Add mapped sites for common reporting locations.</li>
+            <li>Keep member roles aligned with actual duties.</li>
+            <li>Set notification recipients before high-volume reporting begins.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="step">
+        <div>
+          <h2>Submit incidents</h2>
+          <p>Reporters should capture the operational facts: what happened, when it happened, where it happened, how severe it was, and who should be able to see it.</p>
+          <ul>
+            <li>Use concise titles and factual summaries.</li>
+            <li>Add tags that support search and pattern recognition.</li>
+            <li>Select a visibility mode intentionally.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="step">
+        <div>
+          <h2>Review and moderate reports</h2>
+          <p>Reviewers claim reports and move them through explicit moderation actions. Use comments to preserve decision context and follow-up needs.</p>
+          <ul>
+            <li>Claim reports before detailed review.</li>
+            <li>Request changes when facts are missing or unclear.</li>
+            <li>Verify reports only when ready for the selected audience.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="step">
+        <div>
+          <h2>Coordinate trusted partners</h2>
+          <p>Use trusted partner workflows to request organization connections, review relationship status, and track template MOU/NDA signing details.</p>
+          <ul>
+            <li>Confirm relationship intent before sending a partner request.</li>
+            <li>Keep signing metadata accurate for each template document.</li>
+            <li>Review sharing defaults after partner connections are active.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="step">
+        <div>
+          <h2>Maintain the operating record</h2>
+          <p>Use comments, sightings, attachments, audit views, and organization reports to keep decisions traceable over time.</p>
+          <ul>
+            <li>Attach supporting files when they materially help review.</li>
+            <li>Log follow-up sightings when a pattern continues.</li>
+            <li>Review audit trails after sensitive workflow changes.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 Knightsbridge Risk Management. All rights reserved.
+  </footer>
+</body>
+</html>

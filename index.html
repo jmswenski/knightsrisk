@@ -67,6 +67,101 @@
       max-width: 900px;
       margin: 0 auto;
     }
+    .site-nav {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      max-width: 1100px;
+      margin: 0 auto 48px;
+      text-align: left;
+    }
+    .site-nav a {
+      color: #d6e1ea;
+      text-decoration: none;
+      font-weight: 700;
+      transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+    .nav-brand {
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      border: 1px solid transparent;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 0.9rem;
+    }
+    .nav-links a:hover {
+      color: #ffffff;
+      border-color: rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.06);
+    }
+    .nav-links .nav-cta {
+      background: #d6e1ea;
+      color: #0d1a26;
+      border-color: #d6e1ea;
+    }
+    .nav-links .nav-cta:hover {
+      background: #ffffff;
+      color: #0d1a26;
+    }
+    .hero-actions, .cta-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .button-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      border: 1px solid #b0b0b0;
+      background: #b0b0b0;
+      color: #0d1a26;
+      font-weight: 800;
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+    .button-link:hover {
+      background: #ffffff;
+      border-color: #ffffff;
+      color: #0d1a26;
+    }
+    .button-link.secondary {
+      background: transparent;
+      color: #f2f2f2;
+      border-color: rgba(255,255,255,0.24);
+    }
+    .button-link.secondary:hover {
+      background: rgba(255,255,255,0.08);
+      color: #ffffff;
+    }
+    @media (max-width: 720px) {
+      .site-nav {
+        align-items: stretch;
+        flex-direction: column;
+        margin-bottom: 34px;
+        text-align: center;
+      }
+      .nav-links {
+        justify-content: center;
+      }
+    }
 
     /* Container */
     .container {
@@ -125,6 +220,69 @@
     .service-card p {
       color: #d0d0d0;
     }
+    .platform-panel {
+      display: grid;
+      gap: 28px;
+      align-items: start;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      background: #142433;
+      padding: 34px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+    .platform-panel h3 {
+      color: #ffffff;
+      font-size: 1.65rem;
+      margin-bottom: 12px;
+    }
+    .platform-panel p {
+      color: #d0d0d0;
+      margin-bottom: 14px;
+    }
+    .platform-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+    .platform-list li {
+      border: 1px solid #1f3548;
+      border-radius: 10px;
+      background: rgba(0,0,0,0.16);
+      color: #d6e1ea;
+      padding: 14px 16px;
+    }
+    .doc-links {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .doc-link {
+      display: block;
+      min-height: 100%;
+      background: #142433;
+      border: 1px solid #1a2d40;
+      border-radius: 10px;
+      padding: 24px;
+      color: #d6e1ea;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.32);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .doc-link:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255,255,255,0.24);
+    }
+    .doc-link strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #ffffff;
+      font-size: 1.2rem;
+    }
+    @media (max-width: 900px) {
+      .platform-panel {
+        grid-template-columns: 1fr;
+      }
+    }
 
     /* Why / Value props */
     .why-list {
@@ -175,7 +333,7 @@
       margin-bottom: 25px;
       color: #cccccc;
     }
-    .cta a {
+    .cta > a {
       display: inline-block;
       padding: 12px 25px;
       background: #b0b0b0;
@@ -185,7 +343,7 @@
       text-decoration: none;
       transition: background 0.3s ease, color 0.3s ease;
     }
-    .cta a:hover {
+    .cta > a:hover {
       background: #ffffff;
       color: #0d1a26;
     }
@@ -204,10 +362,25 @@
   <body>
     <!-- Hero Section -->
     <header>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="nav-brand" href="/">Knightsbridge Risk</a>
+      <div class="nav-links">
+        <a href="#capabilities">Offerings</a>
+        <a href="#castlewatch">Castlewatch</a>
+        <a href="knowledge-base/">Knowledge Base</a>
+        <a href="user-guide/">User Guide</a>
+        <a href="https://castlewatch.onrender.com/login">Log in</a>
+        <a class="nav-cta" href="https://castlewatch.onrender.com/signup">Sign up</a>
+      </div>
+    </nav>
     <div class="hero-inner">
         <img src="logo-trim.png" alt="Knightsbridge Risk Management logo" loading="eager">
         <h1>Protective Security & Tactical Risk Solutions</h1>
         <p class="subtitle">Knightsbridge Risk Management delivers armed security, executive protection, and red‑team testing—plus rigorous evaluations that connect clients with proven tactical training.</p>
+        <div class="hero-actions" aria-label="Castlewatch application links">
+          <a class="button-link" href="https://castlewatch.onrender.com/signup">Create a Castlewatch workspace</a>
+          <a class="button-link secondary" href="https://castlewatch.onrender.com/login">Log in to Castlewatch</a>
+        </div>
     </div>
     </header>
 
@@ -241,6 +414,45 @@
       </ul>
     </div>
 
+    <!-- Castlewatch Platform Section -->
+    <div id="castlewatch" class="container">
+      <h2 class="section-title">Castlewatch Incident Coordination</h2>
+      <p class="section-lead">Castlewatch is the private incident-sharing workspace for church security teams that need structured reporting, trusted partner coordination, and clear review workflows.</p>
+      <div class="platform-panel">
+        <div>
+          <h3>Turn observations into accountable security workflows.</h3>
+          <p>Use Castlewatch to submit incidents, preserve reviewer notes, coordinate follow-up sightings, and keep organization-level decisions tied to explicit state changes.</p>
+          <p>Designed for trust-based teams, the platform keeps onboarding, organization settings, moderation, billing, and partner relationships in one controlled workspace.</p>
+          <div class="cta-actions">
+            <a class="button-link" href="https://castlewatch.onrender.com/signup">Start your workspace</a>
+            <a class="button-link secondary" href="https://castlewatch.onrender.com/login">Access the app</a>
+          </div>
+        </div>
+        <ul class="platform-list">
+          <li><strong>Structured reporting:</strong> Capture severity, location, visibility, tags, and narrative details for faster review.</li>
+          <li><strong>Moderation workflow:</strong> Claim, verify, request changes, or reject reports with visible action feedback.</li>
+          <li><strong>Trusted partners:</strong> Track organization connections, template MOU/NDA status, and partner visibility defaults.</li>
+          <li><strong>Operational records:</strong> Keep comments, attachments, sightings, audit views, and organization settings close to the work.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Documentation Section -->
+    <div id="resources" class="container">
+      <h2 class="section-title">Platform Resources</h2>
+      <p class="section-lead">Start with practical operating guidance for Castlewatch administrators, reviewers, and reporters.</p>
+      <div class="doc-links">
+        <a class="doc-link" href="knowledge-base/">
+          <strong>Knowledge Base</strong>
+          Short operational articles covering onboarding, incidents, review workflow, trusted partners, billing, and common troubleshooting.
+        </a>
+        <a class="doc-link" href="user-guide/">
+          <strong>User Guide</strong>
+          A step-by-step path for creating a workspace, configuring organization settings, submitting incidents, and reviewing reports.
+        </a>
+      </div>
+    </div>
+
     <!-- Who We Serve Section -->
     <div id="clients" class="container">
       <h2 class="section-title">Who We Serve</h2>
@@ -257,8 +469,11 @@
     <div class="container">
       <div class="cta">
       <h2>Talk to a Specialist</h2>
-      <p>Schedule a confidential consultation. We’ll map your current risks, prioritize actions, and propose a clear, practical plan.</p>
-      <a href="mailto:contact@knightsrisk.com">Book a Consultation</a>
+      <p>Schedule a confidential consultation or create a Castlewatch workspace to begin organizing incident reporting and trusted partner coordination.</p>
+      <div class="cta-actions">
+        <a class="button-link" href="mailto:contact@knightsrisk.com">Book a Consultation</a>
+        <a class="button-link secondary" href="https://castlewatch.onrender.com/signup">Sign up for Castlewatch</a>
+      </div>
       </div>
     </div>
 

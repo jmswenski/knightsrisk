@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Castlewatch Knowledge Base | Knightsbridge Risk Management</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon-180.png">
+  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #0d1a26;
+      color: #f2f2f2;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(180deg, rgba(4, 8, 12, 0.94) 0%, rgba(13, 26, 38, 0.98) 100%);
+      padding: 34px 20px 70px;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='120' viewBox='0 0 140 120'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.12)' stroke-width='1.8'%3E%3Cpath d='M35 4 L70 24 L70 64 L35 84 L0 64 L0 24 Z'/%3E%3Cpath d='M105 4 L140 24 L140 64 L105 84 L70 64 L70 24 Z'/%3E%3Cpath d='M35 64 L70 84 L70 124 L35 144 L0 124 L0 84 Z'/%3E%3Cpath d='M105 64 L140 84 L140 124 L105 144 L70 124 L70 84 Z'/%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.7;
+      pointer-events: none;
+    }
+    .nav, .hero, main, footer {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 56px;
+    }
+    .nav a {
+      color: #d6e1ea;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    .nav-links a {
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 999px;
+      padding: 8px 12px;
+    }
+    .nav-links .primary {
+      background: #d6e1ea;
+      border-color: #d6e1ea;
+      color: #0d1a26;
+    }
+    h1 {
+      max-width: 780px;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+    .lead {
+      max-width: 820px;
+      color: #d6e1ea;
+      font-size: 1.1rem;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      border: 1px solid #b0b0b0;
+      background: #b0b0b0;
+      color: #0d1a26;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .button.secondary {
+      background: transparent;
+      color: #ffffff;
+      border-color: rgba(255,255,255,0.24);
+    }
+    main {
+      padding: 50px 20px 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    article, .callout {
+      background: #142433;
+      border: 1px solid #1a2d40;
+      border-radius: 12px;
+      padding: 26px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.32);
+    }
+    article h2, .callout h2 {
+      color: #ffffff;
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+    article p, article li, .callout p {
+      color: #d0d0d0;
+    }
+    article ul {
+      margin-top: 12px;
+      padding-left: 20px;
+    }
+    .section-title {
+      margin: 48px 0 20px;
+      font-size: 1.75rem;
+      color: #ffffff;
+    }
+    .callout {
+      margin-top: 42px;
+      display: grid;
+      gap: 18px;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+    }
+    footer {
+      padding: 36px 20px 28px;
+      color: #aaaaaa;
+      text-align: center;
+    }
+    @media (max-width: 760px) {
+      .nav, .callout {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+      }
+      .nav-links, .actions {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="../">Knightsbridge Risk</a>
+      <div class="nav-links">
+        <a href="../#castlewatch">Castlewatch</a>
+        <a href="../user-guide/">User Guide</a>
+        <a href="https://castlewatch.onrender.com/login">Log in</a>
+        <a class="primary" href="https://castlewatch.onrender.com/signup">Sign up</a>
+      </div>
+    </nav>
+    <section class="hero">
+      <h1>Castlewatch Knowledge Base</h1>
+      <p class="lead">Practical operating notes for church security teams using Castlewatch to report incidents, review submissions, coordinate trusted partners, and manage organization settings.</p>
+      <div class="actions">
+        <a class="button" href="https://castlewatch.onrender.com/signup">Create workspace</a>
+        <a class="button secondary" href="https://castlewatch.onrender.com/login">Log in</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <h2 class="section-title">Core Articles</h2>
+    <section class="grid" aria-label="Knowledge base articles">
+      <article>
+        <h2>Workspace Onboarding</h2>
+        <p>Start by creating an organization workspace, completing the profile, and setting the primary region. The region helps support regional sharing defaults and organization discovery.</p>
+        <ul>
+          <li>Create the organization account from the signup page.</li>
+          <li>Complete onboarding before inviting the rest of the team.</li>
+          <li>Activate billing when the workspace is ready for live operational use.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h2>Incident Submission</h2>
+        <p>Reports should be operationally useful and privacy-aware. Capture the event time, severity, location, visibility scope, tags, summary, and narrative details.</p>
+        <ul>
+          <li>Use saved organization sites when available for cleaner map placement.</li>
+          <li>Prefer directly observed facts over assumptions.</li>
+          <li>Use selected-partner visibility only when a trusted partner audience is intended.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h2>Review Queue</h2>
+        <p>Reviewers move reports through explicit moderation states. Use claim, request changes, verify, reject, and return-to-review actions deliberately.</p>
+        <ul>
+          <li>Add reviewer notes when context affects the decision.</li>
+          <li>Use request changes when the report needs reporter clarification.</li>
+          <li>Verify only when the report is ready for its selected audience.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h2>Trusted Partners</h2>
+        <p>Trusted organization relationships should be explicit. Castlewatch tracks requests, connection state, and template MOU/NDA status for partner coordination.</p>
+        <ul>
+          <li>Send partner requests only to organizations your team intends to coordinate with.</li>
+          <li>Track signing metadata for the template MOU and NDA before relying on a relationship operationally.</li>
+          <li>Review partner visibility defaults after new connections are established.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h2>Organization Settings</h2>
+        <p>Organization administrators can manage member roles, notification defaults, mapped sites, policy thresholds, sharing defaults, and profile details.</p>
+        <ul>
+          <li>Keep membership roles least-privilege.</li>
+          <li>Maintain mapped sites for accurate dashboard placement.</li>
+          <li>Set notification defaults before broadening reporting access.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h2>Common Troubleshooting</h2>
+        <p>If a workflow appears blocked, check account status, organization status, billing state, and role permissions first.</p>
+        <ul>
+          <li>Onboarding loops usually mean the organization profile has not been activated.</li>
+          <li>Reporting and review pages require an active subscription state.</li>
+          <li>Admin-only settings depend on the policy thresholds configured by the organization.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="callout">
+      <div>
+        <h2>Need an operating walkthrough?</h2>
+        <p>The user guide turns these articles into a step-by-step path for administrators, reporters, and reviewers.</p>
+      </div>
+      <a class="button" href="../user-guide/">Open user guide</a>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 Knightsbridge Risk Management. All rights reserved.
+  </footer>
+</body>
+</html>

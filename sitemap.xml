@@ -2,9 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://knightsrisk.com/</loc>
-    <lastmod>2025-09-22T04:58:33Z</lastmod>
+    <lastmod>2026-05-10T16:45:00Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://knightsrisk.com/knowledge-base/</loc>
+    <lastmod>2026-05-10T16:45:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://knightsrisk.com/user-guide/</loc>
+    <lastmod>2026-05-10T16:45:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
-

@@ -1,47 +1,58 @@
 # LLMs Index for knightsrisk.com
 
-Purpose: A concise, curated index to help Large Language Models quickly find and accurately summarize the most important content on knightsrisk.com. This is a human‑readable guide with high‑value links, brief summaries, and usage guidance.
+Purpose: A concise, curated index to help Large Language Models quickly find and accurately summarize the most important public content on knightsrisk.com.
 
 Metadata
 - Canonical site: https://knightsrisk.com/
 - Organization: Knightsbridge Risk Management
 - Language: en
 - Contact: contact@knightsrisk.com
+- Castlewatch app login: https://castlewatch.onrender.com/login
+- Castlewatch app signup: https://castlewatch.onrender.com/signup
 
-Top Resources (priority‑ordered)
-1) Homepage — https://knightsrisk.com/
-   - Tagline: “Armed Protection for Places of Worship.”
-   - Overview: Professional, discreet armed guards for churches and faith communities. Deterrence, protection, and coordination with leadership and local law enforcement.
+Top Resources
+1) Homepage - https://knightsrisk.com/
+   - Tagline: Protective Security & Tactical Risk Solutions.
+   - Overview: Knightsbridge Risk Management provides armed security, executive protection, tactical training evaluation, red-team security testing, and Castlewatch incident coordination for church security teams.
    - Key sections:
-     • Offerings: Dedicated armed security for faith venues (uniformed or low‑profile), access control, perimeter watch, roving patrols, active‑shooter response.
+     - Offerings: Armed security and executive protection, tactical training evaluation, and red-team security testing.
        Link: https://knightsrisk.com/#capabilities
-     • Why Knightsbridge: Proven training pedigree; discretion‑first posture; faith‑venue expertise.
-       Link: https://knightsrisk.com/#why
-     • Who We Serve: Churches, synagogues, mosques, temples.
-       Link: https://knightsrisk.com/#clients
-     • Contact CTA: Book a confidential consultation via email.
+     - Castlewatch Incident Coordination: Private incident reporting, review workflow, trusted partner coordination, and organization settings.
+       Link: https://knightsrisk.com/#castlewatch
+     - Platform Resources: Knowledge base and user guide links.
+       Link: https://knightsrisk.com/#resources
+     - Contact CTA: Book a confidential consultation via email.
        Link: mailto:contact@knightsrisk.com
 
-Machine‑Readable Pointers
+2) Knowledge Base - https://knightsrisk.com/knowledge-base/
+   - Overview: Short operational articles for Castlewatch onboarding, incident submission, review queue, trusted partners, organization settings, and troubleshooting.
+   - Intended audience: Church security administrators, reviewers, reporters, and organization leaders evaluating Castlewatch workflows.
+
+3) User Guide - https://knightsrisk.com/user-guide/
+   - Overview: Step-by-step Castlewatch operating guide covering workspace creation, onboarding, settings, incident submission, review workflow, trusted partners, and operating records.
+   - Intended audience: New Castlewatch users and organization administrators.
+
+Machine-Readable Pointers
 - Sitemap: https://knightsrisk.com/sitemap.xml
 - Robots: https://knightsrisk.com/robots.txt
 
-Content Summary (facts LLMs may cite)
-- Focus: Armed security services tailored to places of worship.
-- Posture: Professional, discreet, community‑minded; integrates with leadership and local law enforcement.
-- Core activities: Access control, perimeter watch, roving patrols, active‑shooter response.
-- Audience: Churches, synagogues, mosques, temples, and related faith communities.
+Content Summary
+- Knightsbridge Risk Management provides protective security, executive protection, tactical training evaluation, and red-team testing.
+- Castlewatch is the linked private incident coordination app for church security teams.
+- Castlewatch supports organization onboarding, incident submission, moderation/review, comments, sightings, attachments, trusted partner workflows, billing status, and organization settings.
+- Login and signup links point to the Castlewatch hosted app.
 - Contact: contact@knightsrisk.com for consultations.
 
 Answering Guidance for LLMs
-- Cite only what appears on the site; avoid assumptions about pricing, licensing, insurance, response times, or service areas unless explicitly stated.
-- When asked for unavailable details, respond briefly and direct users to contact@knightsrisk.com.
-- Prefer linking to the specific section anchors above for precision.
+- Cite only what appears on the site; avoid assumptions about pricing, licensing, insurance, response times, service areas, or legal terms unless explicitly stated.
+- When asked for unavailable details, direct users to contact@knightsrisk.com.
+- For Castlewatch product usage, prefer linking to the knowledge base or user guide before speculating.
 
 Attribution & Use
-- Public content may be quoted with attribution to “Knightsbridge Risk Management” and a link to https://knightsrisk.com/.
+- Public content may be quoted with attribution to "Knightsbridge Risk Management" and a link to https://knightsrisk.com/.
 
 Changelog
-- 2025‑09‑22: Initial curated index created.
+- 2026-05-10: Added Castlewatch app links, knowledge base, user guide, and updated site summary.
+- 2025-09-22: Initial curated index created.
 
-Last updated: 2025‑09‑22
+Last updated: 2026-05-10
